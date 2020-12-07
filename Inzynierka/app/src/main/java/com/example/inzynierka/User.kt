@@ -1,18 +1,17 @@
 package com.example.inzynierka
 
 class User {
-    var id: String;
-    var login: String;
-    var password: String;
-    var externalId: String;
-    var adminUser: Boolean;
 
-        constructor() {
-            this.id = "";
-            this.login = "";
-            this.password = "";
-            this.externalId = "";
-            this.adminUser = false;
-        }
+    data class UserInfo(
+        val code: String,
+        val data: Data
+    )
 
+    data class Data(
+        val id: String,
+        val login: String,
+        val password: String,
+        val externalId: Int,
+        val adminUser: Boolean
+    )
 }
