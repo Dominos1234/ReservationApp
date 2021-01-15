@@ -3,6 +3,7 @@
     package="com.example.inzynierka">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
 
     <application
         android:allowBackup="true"
@@ -12,19 +13,19 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".SplashScreenActivity"
+        <activity android:name=".QRScannerActivity"></activity>
+        <activity android:name=".ItemsActivity" />
+        <activity
+            android:name=".SplashScreenActivity"
             android:theme="@style/SplashScreenTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
-        <activity android:name=".ResourcesActivity" />
-        <activity android:name=".LoginActivity">
-
-        </activity>
+        <activity android:name=".CategoriesActivity" />
+        <activity android:name=".LoginActivity" />
     </application>
 
 </manifest>

@@ -14,12 +14,7 @@ import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.github.kittinunf.fuel.Fuel
-import com.github.kittinunf.fuel.json.responseJson
 import com.google.gson.Gson
-import org.json.JSONArray
-import org.json.JSONObject
-
-
 
 
 class LoginActivity : AppCompatActivity() {
@@ -37,7 +32,7 @@ class LoginActivity : AppCompatActivity() {
     }
 
     fun showResourcesActivity(){
-        val i = Intent(this, ResourcesActivity::class.java)
+        val i = Intent(this, CategoriesActivity::class.java)
         startActivityForResult(i,REQUEST_CODE)
     }
 
@@ -79,7 +74,7 @@ class LoginActivity : AppCompatActivity() {
                 editor.putString("Id", User.data.id)
                 editor.putString("login", User.data.login)
                 editor.putString("sessionId", User.data.password)
-                editor.putInt("externalId", User.data.externalId)
+                editor.putString("externalId", User.data.externalId)
                 editor.putBoolean("adminUser", User.data.adminUser)
 
                 editor.apply()
@@ -98,7 +93,6 @@ class LoginActivity : AppCompatActivity() {
             Log.e("Failure", error.toString())
         })
 
-
     }
 
         override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -111,9 +105,17 @@ class LoginActivity : AppCompatActivity() {
             if (item.itemId == com.example.inzynierka.R.id.settings){
                 return true
             }
+            else if (item.itemId == com.example.inzynierka.R.id.qr_code){
+                QRScanner()
+                return true
+            }
             return super.onOptionsItemSelected(item)
         }
 
 
+        fun QRScanner(){
+            var i = Intent(this, QRScannerActivity::class.java)
+            startActivity(i)
+        }
 }
 

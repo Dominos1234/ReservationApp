@@ -9,4 +9,8 @@
         android:title="Logout"
         app:showAsAction="never"
         />
+    <item android:id="@+id/qr_code"
+        android:title="Scan QR code"
+        app:showAsAction="never"
+        />
 </menu>

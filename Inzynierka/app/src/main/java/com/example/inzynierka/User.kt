@@ -11,7 +11,7 @@ class User {
         val id: String,
         val login: String,
         val password: String,
-        val externalId: Int,
+        val externalId: String,
         val adminUser: Boolean
     )
 }

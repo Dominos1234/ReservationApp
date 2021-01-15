@@ -18,7 +18,7 @@ class SplashScreenActivity : AppCompatActivity() {
 
             val sharedPreferences = getSharedPreferences("User", Context.MODE_PRIVATE)
             if (sharedPreferences.getString("sessionId", "") != ""){
-                i = Intent(this, ResourcesActivity::class.java)
+                i = Intent(this, CategoriesActivity::class.java)
             }
             startActivity(i)
             overridePendingTransition(android.R.anim.fade_in,android.R.anim.fade_out)
