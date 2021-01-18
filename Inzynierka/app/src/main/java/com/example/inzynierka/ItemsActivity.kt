@@ -9,13 +9,11 @@ import android.os.Bundle
 import android.os.StrictMode
 import android.util.Base64
 import android.util.Log
-import android.view.Gravity
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import android.view.*
 import android.widget.*
 import com.github.kittinunf.fuel.Fuel
 import com.google.gson.Gson
+import java.io.Serializable
 
 class ItemsActivity : AppCompatActivity() {
 
@@ -46,8 +44,6 @@ class ItemsActivity : AppCompatActivity() {
 
 
         result.fold(success = { json ->
-
-
             var toast : Toast
 
             var gson = Gson()
@@ -55,7 +51,7 @@ class ItemsActivity : AppCompatActivity() {
 
 
             if (CategoryJson.code == "notLogged"){ //send back to login
-                //Logout()
+                Logout()
                 toast = Toast.makeText(applicationContext, "Sorry, something went wrong, you were disconnected", Toast.LENGTH_LONG)
                 toast.setGravity(Gravity.TOP, 0, 140)
                 toast.show()
@@ -87,6 +83,27 @@ class ItemsActivity : AppCompatActivity() {
 
     }
 
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        val inflater = menuInflater
+        inflater.inflate(com.example.inzynierka.R.menu.settings_menu, menu)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        if (item.itemId == com.example.inzynierka.R.id.settings){
+            return true
+        }
+        else if (item.itemId == com.example.inzynierka.R.id.logout){
+            Logout()
+            return true
+        }
+        else if (item.itemId == com.example.inzynierka.R.id.qr_code){
+            QRScanner()
+            return true
+        }
+        return super.onOptionsItemSelected(item)
+    }
+
     fun clearSharedPreferences(){
         val sharedPreferences = getSharedPreferences("User", Context.MODE_PRIVATE)
         val editor = sharedPreferences.edit()
@@ -99,9 +116,15 @@ class ItemsActivity : AppCompatActivity() {
 
         editor.apply()
     }
+
     fun Logout(){
         clearSharedPreferences()
         var i = Intent(this, LoginActivity::class.java)
+        startActivity(i)
+    }
+
+    fun QRScanner(){
+        var i = Intent(this, QRScannerActivity::class.java)
         startActivity(i)
     }
 
@@ -111,15 +134,9 @@ class ItemsActivity : AppCompatActivity() {
         listView.adapter = adapter
 
         listView.setOnItemClickListener { parent, view, position, id ->
-            val element = adapter.getItemId(position) // The item that was clicked
 
-            val sharedPreferences = getSharedPreferences("Category", Context.MODE_PRIVATE) //Saving chosen element
-            val editor = sharedPreferences.edit()
-
-            editor.putString("Id", items.get(element.toInt()).id)
-            editor.apply()
-
-            val intent = Intent(this, ItemsActivity::class.java)
+            val intent = Intent(this, CalendarActivity::class.java)
+            intent.putExtra("item", items.get(position) as Serializable)
             startActivity(intent)
         }
 

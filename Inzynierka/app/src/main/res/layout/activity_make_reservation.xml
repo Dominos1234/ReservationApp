@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MakeReservationActivity">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/NameLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <EditText
+            android:id="@+id/Name"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/border_edit"
+            android:padding="12dp"
+            android:ems="10"
+            android:hint="Name"
+            android:textSize="14dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/startDateLabel"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="140dp"
+        android:layout_marginLeft="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <EditText
+            android:id="@+id/startDate"
+            android:layout_width="170dp"
+            android:layout_height="60dp"
+            android:background="@drawable/border_edit"
+            android:drawableStart="@drawable/ic_calendar"
+            android:drawablePadding="12dp"
+            android:ems="10"
+            android:hint="Start Date"
+            android:textSize="14dp"
+            android:focusable="false"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/endDateLabel"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/startDateLabel">
+
+        <EditText
+            android:id="@+id/endDate"
+            android:layout_width="170dp"
+            android:layout_height="60dp"
+            android:background="@drawable/border_edit"
+            android:drawableStart="@drawable/ic_calendar"
+            android:drawablePadding="12dp"
+            android:ems="10"
+            android:focusable="false"
+            android:hint="End Date"
+            android:textSize="14dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/startTimeLabel"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="140dp"
+        android:layout_marginLeft="30dp"
+
+        app:layout_constraintStart_toEndOf="@+id/startDateLabel"
+        app:layout_constraintTop_toTopOf="parent">
+        <EditText
+            android:id="@+id/startTime"
+            android:layout_width="170dp"
+            android:layout_height="60dp"
+            android:background="@drawable/border_edit"
+            android:drawableStart="@drawable/ic_time"
+            android:drawablePadding="12dp"
+            android:focusable="false"
+            android:ems="10"
+            android:hint="Start Time"
+            android:textSize="14dp"
+             />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/endTimeLabel"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="30dp"
+
+        app:layout_constraintStart_toEndOf="@+id/endDateLabel"
+        app:layout_constraintTop_toBottomOf="@+id/startTimeLabel" >
+        <EditText
+            android:id="@+id/endTime"
+            android:layout_width="170dp"
+            android:layout_height="60dp"
+            android:drawablePadding="12dp"
+            android:focusable="false"
+            android:background="@drawable/border_edit"
+            android:drawableStart="@drawable/ic_time"
+            android:ems="10"
+            android:hint="End Time"
+            android:textSize="14dp"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <EditText
+        android:id="@+id/repeatInterval"
+        android:layout_width="170dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="120dp"
+        android:background="@drawable/border_edit"
+        android:padding="12dp"
+        android:ems="10"
+        android:hint="Repeat Interval"
+        android:inputType="number"
+        android:textSize="14dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/endDateLabel" />
+
+    <TextView
+        android:id="@+id/repeatIntervalUnit"
+        android:layout_width="170dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="120dp"
+        android:layout_marginStart="30dp"
+        android:background="@drawable/border_edit"
+        android:padding="12dp"
+        android:ems="10"
+        android:gravity="center"
+        android:textAlignment="textStart"
+        android:hint="Repeat Interval Unit"
+        android:textSize="14dp"
+        app:layout_constraintStart_toEndOf="@+id/repeatInterval"
+        app:layout_constraintTop_toBottomOf="@+id/endTimeLabel"
+        tools:ignore="RtlCompat" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/repeatEndDateLabel"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/repeatInterval">
+        <EditText
+            android:id="@+id/repeatEndDate"
+            android:layout_width="170dp"
+            android:layout_height="60dp"
+            android:focusable="false"
+            android:background="@drawable/border_edit"
+            android:drawableStart="@drawable/ic_calendar"
+            android:drawablePadding="12dp"
+            android:ems="10"
+            android:hint="Repeat End Date"
+            android:textSize="14dp"
+             />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/repeatEndTimeLabel"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="30dp"
+        app:layout_constraintStart_toEndOf="@+id/repeatEndDateLabel"
+        app:layout_constraintTop_toBottomOf="@+id/repeatIntervalUnit">
+        <EditText
+            android:id="@+id/repeatEndTime"
+            android:layout_width="170dp"
+            android:layout_height="60dp"
+            android:focusable="false"
+            android:background="@drawable/border_edit"
+            android:drawableStart="@drawable/ic_time"
+            android:drawablePadding="12dp"
+            android:ems="10"
+            android:hint="Repeat End Time"
+            android:textSize="14dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/sendReservation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Create Booking"
+        android:layout_marginTop="40dp"
+        android:onClick="tryBooking"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/repeatEndTimeLabel" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:text="Optional"
+        app:layout_constraintBottom_toTopOf="@+id/repeatInterval"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/endDateLabel" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

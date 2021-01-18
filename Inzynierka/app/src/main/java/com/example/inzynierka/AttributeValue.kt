@@ -1,6 +1,8 @@
 package com.example.inzynierka
 
-class AttributeValue {
+import java.io.Serializable
+
+class AttributeValue: Serializable{
     val id: String = ""
     val value: String = ""
 }

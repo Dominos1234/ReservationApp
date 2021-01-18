@@ -1,8 +1,11 @@
 package com.example.inzynierka
 
+import java.io.Serializable
+import java.time.LocalDate
+import java.time.LocalDateTime
 import java.util.*
 
-class Booking {
+class Booking: Serializable {
     var id: String = ""
     var itemId = ""
     var categoryId: String = ""
@@ -10,13 +13,13 @@ class Booking {
     var name: String = ""
     var user: String = ""
 
-    var startTime: Date? = null
-    var endTime: Date? = null
-    var creationTime: Date? = null
+    var startTime: Date = Date()
+    var endTime: Date = Date()
+    var creationTime: Date = Date()
 
     var repeatInterval: String = ""
     var repeatIntervalUnit: String = ""
-    var repeatEndTime: Date? = null
+    var repeatEndTime: Date = Date()
 
     var confirmed: Boolean = false
 }

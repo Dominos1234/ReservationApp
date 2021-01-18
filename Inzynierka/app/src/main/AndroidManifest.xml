@@ -13,7 +13,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".QRScannerActivity"></activity>
+        <activity android:name=".MakeReservationActivity"></activity>
+        <activity android:name=".ReservationActivity" />
+        <activity android:name=".CalendarActivity" />
+        <activity android:name=".QRScannerActivity" />
         <activity android:name=".ItemsActivity" />
         <activity
             android:name=".SplashScreenActivity"

@@ -1,14 +1,16 @@
 package com.example.inzynierka
 
-class Item {
+import java.io.Serializable
+
+class Item: Serializable {
     var id: String = ""
     var categoryId = ""
     var name: String = ""
     var description: String = ""
-    var imagesBase64: List<String>? = null
-    var attributes: List<AttributeValue>? = null
+    var imagesBase64: List<String> = listOf<String>()
+    var attributes: List<AttributeValue> = listOf<AttributeValue>()
 
     var bookingAuthorizationRequired: Boolean = false
-    var responsibleUsers: List<String>? = null
-    var bookings: List<Booking>? = null
+    var responsibleUsers: List<String> = listOf<String>()
+    var bookings: ArrayList<Booking> = arrayListOf<Booking>()
 }

@@ -45,7 +45,7 @@ class CategoriesActivity : AppCompatActivity() {
 
             var gson = Gson()
             var CategoriesJson = gson.fromJson(data, CategoriesJson.CategoryInfo::class.java)
-            val cat1 = CategoriesJson.data.get(0)
+
             Log.d("Success", json)
 
             if (CategoriesJson.code == "notLogged"){ //send back to login
