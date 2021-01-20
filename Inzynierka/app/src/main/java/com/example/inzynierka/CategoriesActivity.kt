@@ -48,30 +48,35 @@ class CategoriesActivity : AppCompatActivity() {
 
             Log.d("Success", json)
 
-            if (CategoriesJson.code == "notLogged"){ //send back to login
-                Logout()
-                toast = Toast.makeText(applicationContext, "Sorry, something went wrong, you were disconnected", Toast.LENGTH_LONG)
-                toast.setGravity(Gravity.TOP, 0, 140)
-                toast.show()
-            }
-            else if(CategoriesJson.code == "correct") {
+            var notLogged = "Sorry, something went wrong, you were disconnected"
+            var missingPermissions = "Account permissions are not sufficient to perform this action."
+            var unknownError = "Unknown error occurred."
 
-                var categories = ArrayList<Category>()
-
-
-                for (category in CategoriesJson.data){
-                    var cat = Category()
-                    cat.id = category.id
-                    cat.description = category.description
-                    cat.name = category.name
-                    cat.attributes = category.attributes
-                    cat.imageBase64 = category.imageBase64
-
-                    categories.add(cat)
+            when (CategoriesJson.code){ //send back to login
+                "notLogged" -> {
+                    Logout()
+                    Toast.makeText(this, notLogged, Toast.LENGTH_LONG).show()
                 }
-                Log.d("Success", categories.get(0).imageBase64)
+                "correct" -> {
+                    var categories = ArrayList<Category>()
 
-                showCategories(categories)
+                    for (category in CategoriesJson.data) {
+                        var cat = Category()
+                        cat.id = category.id
+                        cat.description = category.description
+                        cat.name = category.name
+                        cat.attributes = category.attributes
+                        cat.imageBase64 = category.imageBase64
+
+                        categories.add(cat)
+                    }
+                    Log.d("Success", categories.get(0).imageBase64)
+
+                    showCategories(categories)
+                }
+
+                "missingPermissions" -> Toast.makeText(this, missingPermissions, Toast.LENGTH_LONG).show()
+                "unknownError" -> Toast.makeText(this, unknownError, Toast.LENGTH_LONG).show()
             }
 
         }, failure = { error ->

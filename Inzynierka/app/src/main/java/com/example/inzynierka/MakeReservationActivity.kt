@@ -389,6 +389,7 @@ class MakeReservationActivity : AppCompatActivity(), DatePickerDialog.OnDateSetL
             var missingPermissions = "Account permissions are not sufficient to perform this action."
             var masterAdminNotAllowed = "Master admin is not allowed for this action. Please login to admin account."
             var bookingExistingInSameInterval = "Another booking already exists in given time interval."
+            var unknownError = "Unknown error occurred."
 
             when (Response.code){
                 "notLogged" -> {
@@ -412,7 +413,7 @@ class MakeReservationActivity : AppCompatActivity(), DatePickerDialog.OnDateSetL
                 "missingPermissions" -> Toast.makeText(this, missingPermissions, Toast.LENGTH_LONG).show()
                 "masterAdminNotAllowed" -> Toast.makeText(this, masterAdminNotAllowed, Toast.LENGTH_LONG).show()
                 "bookingExistingInSameInterval" -> Toast.makeText(this, bookingExistingInSameInterval, Toast.LENGTH_LONG).show()
-
+                "unknownError" -> Toast.makeText(this, unknownError, Toast.LENGTH_LONG).show()
             }
 
         }, failure = { error ->

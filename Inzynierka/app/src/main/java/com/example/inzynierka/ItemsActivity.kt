@@ -50,33 +50,38 @@ class ItemsActivity : AppCompatActivity() {
             var CategoryJson = gson.fromJson(data, CategoryJson.CategoryInfo::class.java)
 
 
-            if (CategoryJson.code == "notLogged"){ //send back to login
-                Logout()
-                toast = Toast.makeText(applicationContext, "Sorry, something went wrong, you were disconnected", Toast.LENGTH_LONG)
-                toast.setGravity(Gravity.TOP, 0, 140)
-                toast.show()
+            var notLogged = "Sorry, something went wrong, you were disconnected"
+            var missingPermissions = "Account permissions are not sufficient to perform this action."
+            var unknownError = "Unknown error occurred."
+
+            when (CategoryJson.code) { //send back to login
+                "notLogged" -> {
+                    Logout()
+                    Toast.makeText(this, notLogged, Toast.LENGTH_LONG).show()
+                }
+                "correct" -> {
+                    var items = ArrayList<Item>()
+
+                    for (i in CategoryJson.data.items) {
+                        var item = Item()
+                        item.id = i.id
+                        item.description = i.description
+                        item.name = i.name
+                        item.attributes = i.attributes
+                        item.imagesBase64 = i.imagesBase64
+                        item.categoryId = i.categoryId
+                        item.bookingAuthorizationRequired = i.bookingAuthorizationRequired
+                        item.responsibleUsers = i.responsibleUsers
+                        item.bookings = i.bookings
+
+                        items.add(item)
+                    }
+
+                    showItems(items)
+                }
+                "missingPermissions" -> Toast.makeText(this, missingPermissions, Toast.LENGTH_LONG).show()
+                "unknownError" -> Toast.makeText(this, unknownError, Toast.LENGTH_LONG).show()
             }
-            else if(CategoryJson.code == "correct") {
-
-                var items = ArrayList<Item>()
-
-                for (i in CategoryJson.data.items) {
-                    var item = Item()
-                    item.id = i.id
-                    item.description = i.description
-                    item.name = i.name
-                    item.attributes = i.attributes
-                    item.imagesBase64 = i.imagesBase64
-                    item.categoryId = i.categoryId
-                    item.bookingAuthorizationRequired = i.bookingAuthorizationRequired
-                    item.responsibleUsers = i.responsibleUsers
-                    item.bookings = i.bookings
-
-                    items.add(item)
-                }
-
-                showItems(items)
-                }
         }, failure = { error ->
             Log.e("Failure", error.toString())
         })
