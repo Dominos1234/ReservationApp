@@ -145,7 +145,7 @@ class CategoriesActivity : AppCompatActivity() {
             editor.putString("Id", categories.get(element.toInt()).id)
             editor.apply()
 
-            val intent = Intent(this, ItemsActivity::class.java)
+            val intent = Intent(this, SplashScreen2Activity::class.java)
             startActivity(intent)
         }
 

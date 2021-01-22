@@ -7,8 +7,6 @@ android {
     buildToolsVersion "30.0.2"
 
 
-
-
     defaultConfig {
         applicationId "com.example.inzynierka"
         minSdkVersion 19

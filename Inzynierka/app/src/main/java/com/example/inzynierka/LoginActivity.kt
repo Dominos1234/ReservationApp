@@ -117,5 +117,9 @@ class LoginActivity : AppCompatActivity() {
             var i = Intent(this, QRScannerActivity::class.java)
             startActivity(i)
         }
+        fun ScanQRCode(view: View){
+            var i = Intent(this, QRScannerActivity::class.java)
+            startActivity(i)
+        }
 }
 
