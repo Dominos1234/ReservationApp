@@ -10,7 +10,9 @@ import android.view.Gravity
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
+import android.widget.Button
 import android.widget.EditText
+import android.widget.PopupMenu
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.github.kittinunf.fuel.Fuel
@@ -28,9 +30,26 @@ class LoginActivity : AppCompatActivity() {
                 StrictMode.ThreadPolicy.Builder().permitAll().build()
             StrictMode.setThreadPolicy(policy)
         }
-
+        popupMenu()
     }
 
+    fun popupMenu(){
+        val showMenuBtn:View = findViewById(R.id.showMenuBtn)
+        val popupMenu = PopupMenu(this,showMenuBtn)
+
+        popupMenu.menuInflater.inflate(R.menu.settings_menu_nologout,popupMenu.menu)
+        popupMenu.setOnMenuItemClickListener { item ->
+            if (item.itemId == com.example.inzynierka.R.id.settings){
+            }
+            else if (item.itemId == com.example.inzynierka.R.id.qr_code){
+                QRScanner()
+            }
+            false
+        }
+        showMenuBtn.setOnClickListener {
+            popupMenu.show()
+        }
+    }
     fun showResourcesActivity(){
         val i = Intent(this, CategoriesActivity::class.java)
         startActivityForResult(i,REQUEST_CODE)
@@ -94,7 +113,7 @@ class LoginActivity : AppCompatActivity() {
         })
 
     }
-
+        /*
         override fun onCreateOptionsMenu(menu: Menu?): Boolean {
             val inflater = menuInflater
             inflater.inflate(com.example.inzynierka.R.menu.settings_menu_nologout, menu)
@@ -112,14 +131,17 @@ class LoginActivity : AppCompatActivity() {
             return super.onOptionsItemSelected(item)
         }
 
-
+*/
         fun QRScanner(){
             var i = Intent(this, QRScannerActivity::class.java)
             startActivity(i)
         }
+
         fun ScanQRCode(view: View){
             var i = Intent(this, QRScannerActivity::class.java)
             startActivity(i)
         }
+
+
 }
 

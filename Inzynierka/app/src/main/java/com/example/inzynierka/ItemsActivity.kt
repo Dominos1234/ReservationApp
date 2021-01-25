@@ -26,6 +26,8 @@ class ItemsActivity : AppCompatActivity() {
             StrictMode.setThreadPolicy(policy)
         }
 
+        popupMenu()
+
         var sessionId : String
         var categoryId : String
 
@@ -107,6 +109,25 @@ class ItemsActivity : AppCompatActivity() {
             return true
         }
         return super.onOptionsItemSelected(item)
+    }
+
+
+    fun popupMenu(){
+        val showMenuBtn:View = findViewById(R.id.showMenuBtn)
+        val popupMenu = PopupMenu(this,showMenuBtn)
+
+        popupMenu.menuInflater.inflate(R.menu.settings_menu,popupMenu.menu)
+        popupMenu.setOnMenuItemClickListener { item ->
+            if (item.itemId == com.example.inzynierka.R.id.settings){
+            }
+            else if (item.itemId == com.example.inzynierka.R.id.qr_code){
+                QRScanner()
+            }
+            false
+        }
+        showMenuBtn.setOnClickListener {
+            popupMenu.show()
+        }
     }
 
     fun clearSharedPreferences(){
