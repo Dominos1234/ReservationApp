@@ -1,4 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Inzynierka</string>
-
+    <string name="app_name">ISRZ</string>
+    <string name="username">Nazwa użytkownika</string>
+    <string name="password">Hasło</string>
+    <string name="login">Zaloguj się</string>
+    <string name="title_login">Logowanie</string>
+    <string name="qrCodeScan">Skanuj kod QR</string>
+    <string name="createReservation">Utwórz rezerwacje</string>
+    <string name="qrCodeDescription">Zeskanuj kod QR znajdujący się przy wybranej sali</string>
+    <string name="polish">polski</string>
+    <string name="english">angielski</string>
+    <string name="calendar">Kalendarz</string>
+    <string name="categories">Kategorie</string>
 </resources>

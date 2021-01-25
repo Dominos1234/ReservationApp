@@ -19,6 +19,10 @@ class ItemsActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        try {
+            this.supportActionBar!!.hide()
+        } catch (e: NullPointerException) {
+        }
         setContentView(R.layout.activity_items)
         if (Build.VERSION.SDK_INT > 9) {
             val policy =
@@ -119,6 +123,9 @@ class ItemsActivity : AppCompatActivity() {
         popupMenu.menuInflater.inflate(R.menu.settings_menu,popupMenu.menu)
         popupMenu.setOnMenuItemClickListener { item ->
             if (item.itemId == com.example.inzynierka.R.id.settings){
+            }
+            else if (item.itemId == com.example.inzynierka.R.id.logout){
+                Logout()
             }
             else if (item.itemId == com.example.inzynierka.R.id.qr_code){
                 QRScanner()

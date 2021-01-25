@@ -57,6 +57,10 @@ class MakeReservationActivity : AppCompatActivity(), DatePickerDialog.OnDateSetL
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        try {
+            this.supportActionBar!!.hide()
+        } catch (e: NullPointerException) {
+        }
         setContentView(R.layout.activity_make_reservation)
 
         day = intent.getIntExtra("day",0)

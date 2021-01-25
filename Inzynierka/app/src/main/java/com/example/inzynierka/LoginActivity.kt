@@ -6,10 +6,7 @@ import android.os.Build
 import android.os.Bundle
 import android.os.StrictMode
 import android.util.Log
-import android.view.Gravity
-import android.view.Menu
-import android.view.MenuItem
-import android.view.View
+import android.view.*
 import android.widget.Button
 import android.widget.EditText
 import android.widget.PopupMenu
@@ -24,6 +21,10 @@ class LoginActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        try {
+            this.supportActionBar!!.hide()
+        } catch (e: NullPointerException) {
+        }
         setContentView(R.layout.activity_main)
         if (Build.VERSION.SDK_INT > 9) {
             val policy =
