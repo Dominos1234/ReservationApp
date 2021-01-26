@@ -17,7 +17,7 @@ import com.google.gson.Gson
 
 
 class LoginActivity : AppCompatActivity() {
-    val REQUEST_CODE = 1000
+    private val REQUEST_CODE = 1000
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -34,16 +34,14 @@ class LoginActivity : AppCompatActivity() {
         popupMenu()
     }
 
-    fun popupMenu(){
+    private fun popupMenu(){
         val showMenuBtn:View = findViewById(R.id.showMenuBtn)
         val popupMenu = PopupMenu(this,showMenuBtn)
 
         popupMenu.menuInflater.inflate(R.menu.settings_menu_nologout,popupMenu.menu)
         popupMenu.setOnMenuItemClickListener { item ->
-            if (item.itemId == com.example.inzynierka.R.id.settings){
-            }
-            else if (item.itemId == com.example.inzynierka.R.id.qr_code){
-                QRScanner()
+            if (item.itemId == R.id.settings){
+                settings()
             }
             false
         }
@@ -77,7 +75,7 @@ class LoginActivity : AppCompatActivity() {
 
             Log.d("Success", json)
 
-            var toast : Toast
+            val toast : Toast
 
             var gson = Gson()
             var User = gson.fromJson(data, User.UserInfo::class.java)
@@ -133,16 +131,15 @@ class LoginActivity : AppCompatActivity() {
         }
 
 */
-        fun QRScanner(){
-            var i = Intent(this, QRScannerActivity::class.java)
-            startActivity(i)
-        }
 
         fun ScanQRCode(view: View){
             var i = Intent(this, QRScannerActivity::class.java)
             startActivity(i)
         }
 
-
+        fun settings(){
+            var i = Intent(this, SettingsActivity::class.java)
+            startActivity(i)
+        }
 }
 

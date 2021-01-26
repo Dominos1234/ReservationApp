@@ -17,6 +17,8 @@ import java.io.Serializable
 
 class ItemsActivity : AppCompatActivity() {
 
+    lateinit var category: Category
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         try {
@@ -29,6 +31,8 @@ class ItemsActivity : AppCompatActivity() {
                 StrictMode.ThreadPolicy.Builder().permitAll().build()
             StrictMode.setThreadPolicy(policy)
         }
+
+        category = intent.getSerializableExtra("category") as Category
 
         popupMenu()
 
@@ -49,18 +53,17 @@ class ItemsActivity : AppCompatActivity() {
         val (data, _) = result
 
 
-        result.fold(success = { json ->
-            var toast : Toast
+        result.fold(success = { _ ->
 
             var gson = Gson()
-            var CategoryJson = gson.fromJson(data, CategoryJson.CategoryInfo::class.java)
+            var categoryJson = gson.fromJson(data, CategoryJson.CategoryInfo::class.java)
 
 
             var notLogged = "Sorry, something went wrong, you were disconnected"
             var missingPermissions = "Account permissions are not sufficient to perform this action."
             var unknownError = "Unknown error occurred."
 
-            when (CategoryJson.code) { //send back to login
+            when (categoryJson.code) { //send back to login
                 "notLogged" -> {
                     Logout()
                     Toast.makeText(this, notLogged, Toast.LENGTH_LONG).show()
@@ -68,7 +71,7 @@ class ItemsActivity : AppCompatActivity() {
                 "correct" -> {
                     var items = ArrayList<Item>()
 
-                    for (i in CategoryJson.data.items) {
+                    for (i in categoryJson.data.items) {
                         var item = Item()
                         item.id = i.id
                         item.description = i.description
@@ -123,6 +126,7 @@ class ItemsActivity : AppCompatActivity() {
         popupMenu.menuInflater.inflate(R.menu.settings_menu,popupMenu.menu)
         popupMenu.setOnMenuItemClickListener { item ->
             if (item.itemId == com.example.inzynierka.R.id.settings){
+                settings()
             }
             else if (item.itemId == com.example.inzynierka.R.id.logout){
                 Logout()
@@ -150,39 +154,44 @@ class ItemsActivity : AppCompatActivity() {
         editor.apply()
     }
 
-    fun Logout(){
+    private fun settings(){
+        var i = Intent(this, SettingsActivity::class.java)
+        startActivity(i)
+    }
+
+    private fun Logout(){
         clearSharedPreferences()
         var i = Intent(this, LoginActivity::class.java)
         startActivity(i)
     }
 
-    fun QRScanner(){
+    private fun QRScanner(){
         var i = Intent(this, QRScannerActivity::class.java)
         startActivity(i)
     }
 
     private fun showItems(items: ArrayList<Item>){
         val listView = findViewById<ListView>(com.example.inzynierka.R.id.items_listview)
-        val adapter = MyCustomAdapter(this, items)
+        val adapter = MyItemAdapter(this, items, category)
         listView.adapter = adapter
 
-        listView.setOnItemClickListener { parent, view, position, id ->
-
+        listView.setOnItemClickListener { _, _, position, _ ->
             val intent = Intent(this, CalendarActivity::class.java)
             intent.putExtra("item", items.get(position) as Serializable)
             startActivity(intent)
         }
-
     }
 
-    private class MyCustomAdapter(context: Context, itemList: ArrayList<Item>) : BaseAdapter()
+    private class MyItemAdapter(context: Context, itemList: ArrayList<Item>, category: Category) : BaseAdapter()
     {
         private val mContext: Context
         private val mItemList: ArrayList<Item>
+        private val mCategory: Category
 
         init{
             mContext = context
             mItemList = itemList
+            mCategory = category
         }
 
         override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
@@ -193,12 +202,44 @@ class ItemsActivity : AppCompatActivity() {
             val Description = rowMain.findViewById<TextView>(com.example.inzynierka.R.id.description)
             val Image = rowMain.findViewById<ImageView>(com.example.inzynierka.R.id.image)
 
+            val nameVal1 = rowMain.findViewById<TextView>(com.example.inzynierka.R.id.nameVal1)
+            val nameVal2 = rowMain.findViewById<TextView>(com.example.inzynierka.R.id.nameVal2)
+            val nameVal3 = rowMain.findViewById<TextView>(com.example.inzynierka.R.id.nameVal3)
+            val nameVal4 = rowMain.findViewById<TextView>(com.example.inzynierka.R.id.nameVal4)
+            val nameVal5 = rowMain.findViewById<TextView>(com.example.inzynierka.R.id.nameVal5)
+            val nameVal6 = rowMain.findViewById<TextView>(com.example.inzynierka.R.id.nameVal6)
+            val nameVal7 = rowMain.findViewById<TextView>(com.example.inzynierka.R.id.nameVal7)
 
-            Name.text = mItemList.get(position).name
-            Description.text = mItemList.get(position).description
+            var nameValList = java.util.ArrayList<TextView>()
+            nameValList.add(nameVal1)
+            nameValList.add(nameVal2)
+            nameValList.add(nameVal3)
+            nameValList.add(nameVal4)
+            nameValList.add(nameVal5)
+            nameValList.add(nameVal6)
+            nameValList.add(nameVal7)
 
-            if (mItemList.get(position).imagesBase64!!.size>0) {
-                val cleanImage = mItemList.get(position).imagesBase64!!.get(0)
+            var i = 0
+            for (attributeVal in mItemList.get(position).attributes ){
+                val id = attributeVal.id
+                val value = attributeVal.value
+                var nameVal = ""
+                for(attribute in mCategory.attributes!!){
+                    if(attribute.id==id){
+                        nameVal = "${attribute.name}: $value"
+                    }
+                }
+                nameValList[i].text = nameVal
+                i++
+            }
+
+
+            Name.text = "Nazwa: " + mItemList.get(position).name
+            Description.text = "Opis: " + mItemList.get(position).description
+
+
+            if (mItemList.get(position).imagesBase64.isNotEmpty()) {
+                val cleanImage = mItemList.get(position).imagesBase64.get(0)
                     .replace("data:image/png;base64,", "")
                     .replace("data:image/jpeg;base64,", "")
                 val imageBytes = Base64.decode(cleanImage, Base64.DEFAULT)
@@ -219,6 +260,58 @@ class ItemsActivity : AppCompatActivity() {
 
         override fun getCount(): Int {
             return mItemList.size
+        }
+
+    }
+
+    private class MyAttributeAdapter(context: Context, attributeList: ArrayList<AttributeValue>, category: Category) : BaseAdapter()
+    {
+        private val mContext: Context
+        private val mAttributeList: ArrayList<AttributeValue>
+        private val mCategory: Category
+
+        init{
+            mContext = context
+            mAttributeList = attributeList
+            mCategory = category
+        }
+
+        override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
+            val layoutInflater = LayoutInflater.from(mContext)
+            val rowMain = layoutInflater.inflate(com.example.inzynierka.R.layout.attribute_row,parent, false)
+
+            val Name = rowMain.findViewById<TextView>(com.example.inzynierka.R.id.name)
+            val Value = rowMain.findViewById<TextView>(com.example.inzynierka.R.id.value)
+
+
+            val id = mAttributeList.get(position).id
+            var name = ""
+            for(attribute in mCategory.attributes!!){
+                if(attribute.id==id){
+                    name = attribute.name + ":"
+                }
+            }
+
+            Name.text = name
+            Value.text = mAttributeList.get(position).value
+
+            return rowMain
+        }
+
+        override fun getItem(position: Int): Any {
+            return "String"
+        }
+
+        override fun getItemId(position: Int): Long {
+            return position.toLong()
+        }
+
+        override fun getCount(): Int {
+            return mAttributeList.size
+        }
+
+        override fun isEnabled(position: Int): Boolean {
+            return false
         }
 
     }

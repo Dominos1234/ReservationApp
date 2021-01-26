@@ -1,19 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.inzynierka">
+    package="com.example.inzynierka" >
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.CAMERA" />
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/ic_launcher2"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/ic_launcher_circle2"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
-        android:usesCleartextTraffic="true">
-        <activity android:name=".SplashScreen2Activity"></activity>
+        android:usesCleartextTraffic="true" >
+        <activity android:name=".SettingsActivity" >
+        </activity>
+        <activity android:name=".SplashScreen2Activity" />
         <activity android:name=".MakeReservationActivity" />
         <activity android:name=".ReservationActivity" />
         <activity android:name=".CalendarActivity" />
@@ -21,7 +23,7 @@
         <activity android:name=".ItemsActivity" />
         <activity
             android:name=".SplashScreenActivity"
-            android:theme="@style/SplashScreenTheme">
+            android:theme="@style/SplashScreenTheme" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

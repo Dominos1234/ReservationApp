@@ -8,7 +8,7 @@ class Item: Serializable {
     var name: String = ""
     var description: String = ""
     var imagesBase64: List<String> = listOf<String>()
-    var attributes: List<AttributeValue> = listOf<AttributeValue>()
+    var attributes: ArrayList<AttributeValue> = arrayListOf<AttributeValue>()
 
     var bookingAuthorizationRequired: Boolean = false
     var responsibleUsers: List<String> = listOf<String>()

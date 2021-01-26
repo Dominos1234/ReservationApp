@@ -10,6 +10,7 @@ import android.os.Build
 import android.os.Bundle
 import android.os.StrictMode
 import android.util.Log
+import android.view.Gravity
 import android.view.View
 import android.widget.TextView
 import android.widget.Toast
@@ -278,7 +279,7 @@ class ReservationActivity : AppCompatActivity() {
                 val extId = sharedPreferences.getString("externalId","")
 
                 if ((startDate.dayOfMonth == day && startDate.monthValue == month && startDate.year == year) || (endDate.dayOfMonth == day && endDate.monthValue == month && endDate.year == year)){
-                    for (i in 0..eHour*4+eMinute-sHour*4-sMinute-1) {
+                    for (i in 0 until eHour*4+eMinute-sHour*4-sMinute) {
                         var n = sHour*4+sMinute
                         if(book.user != "$extId ($username)") {
                             if(i==0){ //First row out of reservation
@@ -300,10 +301,14 @@ class ReservationActivity : AppCompatActivity() {
                                     hours = "$startHour:$startMinutes-$endHour:0$endMinutes"
                                 else hours = "$startHour:$startMinutes-$endHour:$endMinutes"
 
-                                if(rowList[n+i].text.isEmpty())  //Name the reservation
-                                    rowList[n + i].text = "${book.name}, ${hours}"
-                                else
-                                    rowList[n + i + 1].text = "${book.name}, ${hours}"
+                                if(rowList[n+i].text.isEmpty()) {  //Name the reservation
+                                    rowList[n + i].text = "${book.name}, ${book.user}, $hours"
+                                    rowList[n + i].gravity = Gravity.CENTER
+                                }
+                                else {
+                                    rowList[n + i + 1].text = "${book.name}, ${book.user}, $hours"
+                                    rowList[n + i + 1].gravity = Gravity.CENTER
+                                }
                                 changeColorRedBorderTop(rowList[n + i])
                                 BookedHoursOthers.add(rowList[n + i])
                             }
@@ -336,10 +341,14 @@ class ReservationActivity : AppCompatActivity() {
                                     hours = "$startHour:$startMinutes-$endHour:0$endMinutes"
                                 else hours = "$startHour:$startMinutes-$endHour:$endMinutes"
 
-                                if(rowList[n+i].text.isEmpty())  //Name the reservation
-                                    rowList[n + i].text = "${book.name}, ${hours}"
-                                else
-                                    rowList[n + i + 1].text = "${book.name}, ${hours}"
+                                if(rowList[n+i].text.isEmpty()) {  //Name the reservation
+                                    rowList[n + i].text = "${book.name}, ${book.user}, $hours"
+                                    rowList[n + i].gravity = Gravity.CENTER
+                                }
+                                else {
+                                    rowList[n + i + 1].text = "${book.name}, ${book.user}, $hours"
+                                    rowList[n + i + 1].gravity = Gravity.CENTER
+                                }
                                 changeColorGreenBorderTop(rowList[n + i])
                                 BookedHoursMy.add(rowList[n + i])
                             }
@@ -403,10 +412,14 @@ class ReservationActivity : AppCompatActivity() {
                                         hours = "$startHour:$startMinutes-$endHour:0$endMinutes"
                                     else hours = "$startHour:$startMinutes-$endHour:$endMinutes"
 
-                                    if(rowList[n+i].text.isEmpty())  //Name the reservation
-                                        rowList[n + i].text = "${book.name}, ${hours}"
-                                    else
-                                        rowList[n + i + 1].text = "${book.name}, ${hours}"
+                                    if(rowList[n+i].text.isEmpty()) {  //Name the reservation
+                                        rowList[n + i].text = "${book.name}, ${book.user}, $hours"
+                                        rowList[n + i].gravity = Gravity.CENTER
+                                    }
+                                    else {
+                                        rowList[n + i + 1].text = "${book.name}, ${book.user}, $hours"
+                                        rowList[n + i + 1].gravity = Gravity.CENTER
+                                    }
                                     changeColorRedBorderTop(rowList[n + i])
                                     BookedHoursOthers.add(rowList[n + i])
                                 }
@@ -439,10 +452,15 @@ class ReservationActivity : AppCompatActivity() {
                                         hours = "$startHour:$startMinutes-$endHour:0$endMinutes"
                                     else hours = "$startHour:$startMinutes-$endHour:$endMinutes"
 
-                                    if(rowList[n+i].text.isEmpty())  //Name the reservation
-                                        rowList[n + i].text = "${book.name}, ${hours}"
-                                    else
-                                        rowList[n + i + 1].text = "${book.name}, ${hours}"
+                                    if(rowList[n+i].text.isEmpty()) {  //Name the reservation
+                                        rowList[n + i].text = "${book.name}, ${book.user}, $hours"
+                                        rowList[n + i].gravity = Gravity.CENTER
+                                    }
+                                    else {
+                                        rowList[n + i + 1].text = "${book.name}, ${book.user}, $hours"
+                                        rowList[n + i + 1].gravity = Gravity.CENTER
+                                    }
+
                                     changeColorGreenBorderTop(rowList[n + i])
                                     BookedHoursMy.add(rowList[n + i])
                                 }
@@ -554,7 +572,7 @@ class ReservationActivity : AppCompatActivity() {
                 }
             }
         }
-        var hours = ""
+        var hours: String
         if(startMinutes<10 && endMinutes<10)
             hours = "$startHour:0$startMinutes-$endHour:0$endMinutes"
         else if(startMinutes<10)
@@ -623,7 +641,7 @@ class ReservationActivity : AppCompatActivity() {
         val sharedPreferencesCategory = getSharedPreferences("Category", Context.MODE_PRIVATE)
         var categoryId = sharedPreferencesCategory.getString("Id", "")
 
-        val (_, _, result) = Fuel.delete("http://51.178.82.249:2067/api/user/category/$categoryId/item/${item?.id}/booking/${bookingToDelete.id}")
+        val (_, _, result) = Fuel.delete("http://51.178.82.249:2067/api/user/category/$categoryId/item/${item.id}/booking/${bookingToDelete.id}")
             .header("session-id", sessionId)
             .responseString()
 
@@ -631,9 +649,6 @@ class ReservationActivity : AppCompatActivity() {
 
 
         result.fold(success = { json ->
-
-
-            var toast: Toast
 
             var gson = Gson()
             var Response = gson.fromJson(data, ResponseJson.ResponseInfo::class.java)
@@ -697,15 +712,13 @@ class ReservationActivity : AppCompatActivity() {
         val (data, _) = result
 
 
-        result.fold(success = { json ->
-            var toast : Toast
+        result.fold(success = { _ ->
 
             var gson = Gson()
             var CategoryJson = gson.fromJson(data, CategoryJson.CategoryInfo::class.java)
 
 
             var notLogged = "Sorry, something went wrong, you were disconnected"
-            var correct = "Successfully updated reservations"
             var missingFields = "Technical error occurred: some fields are missing."
             var invalidData = "Technical error occurred: invalid request data."
             var entityAlreadyExists = "Entity with given key already exists."
@@ -758,7 +771,7 @@ class ReservationActivity : AppCompatActivity() {
     @RequiresApi(Build.VERSION_CODES.O)
     fun ToLocalDateTime(date: Date): LocalDateTime{
 
-            return date.time?.let {
+            return date.time.let {
                 Instant.ofEpochMilli(it)
                     .atZone(ZoneId.systemDefault())
                     .toLocalDateTime()

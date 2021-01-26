@@ -1,6 +1,8 @@
 package com.example.inzynierka
 
-class Category {
+import java.io.Serializable
+
+class Category: Serializable {
     var id: String = ""
     var name: String = ""
     var description: String = ""

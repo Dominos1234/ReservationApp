@@ -13,6 +13,7 @@ import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import com.github.kittinunf.fuel.Fuel
 import com.google.gson.Gson
+import java.io.Serializable
 
 
 class CategoriesActivity : AppCompatActivity() {
@@ -24,7 +25,7 @@ class CategoriesActivity : AppCompatActivity() {
         } catch (e: NullPointerException) {
         }
 
-        setContentView(com.example.inzynierka.R.layout.activity_categories)
+        setContentView(R.layout.activity_categories)
         if (Build.VERSION.SDK_INT > 9) {
             val policy =
                 StrictMode.ThreadPolicy.Builder().permitAll().build()
@@ -46,9 +47,6 @@ class CategoriesActivity : AppCompatActivity() {
 
 
         result.fold(success = { json ->
-
-
-            var toast : Toast
 
             var gson = Gson()
             var CategoriesJson = gson.fromJson(data, CategoriesJson.CategoryInfo::class.java)
@@ -92,38 +90,15 @@ class CategoriesActivity : AppCompatActivity() {
 
 
     }
-/*
-    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        val inflater = menuInflater
-        inflater.inflate(com.example.inzynierka.R.menu.settings_menu, menu)
-        return true
-    }
 
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        if (item.itemId == com.example.inzynierka.R.id.settings){
-            return true
-        }
-        else if (item.itemId == com.example.inzynierka.R.id.logout){
-            Logout()
-            return true
-        }
-        else if (item.itemId == com.example.inzynierka.R.id.qr_code){
-            QRScanner()
-            return true
-        }
-        return super.onOptionsItemSelected(item)
-    }
-
- */
-
-    fun popupMenu(){
+    private fun popupMenu(){
         val showMenuBtn:View = findViewById(R.id.showMenuBtn)
         val popupMenu = PopupMenu(this,showMenuBtn)
 
         popupMenu.menuInflater.inflate(R.menu.settings_menu,popupMenu.menu)
         popupMenu.setOnMenuItemClickListener { item ->
             if (item.itemId == com.example.inzynierka.R.id.settings){
-
+                settings()
             }
             else if (item.itemId == com.example.inzynierka.R.id.logout){
                 Logout()
@@ -139,7 +114,7 @@ class CategoriesActivity : AppCompatActivity() {
         }
     }
 
-    fun clearSharedPreferences(){
+    private fun clearSharedPreferences(){
         val sharedPreferences = getSharedPreferences("User", Context.MODE_PRIVATE)
         val editor = sharedPreferences.edit()
 
@@ -152,23 +127,28 @@ class CategoriesActivity : AppCompatActivity() {
         editor.apply()
     }
 
-    fun Logout(){
+    fun settings(){
+        var i = Intent(this, SettingsActivity::class.java)
+        startActivity(i)
+    }
+
+    private fun Logout(){
         clearSharedPreferences()
         var i = Intent(this, LoginActivity::class.java)
         startActivity(i)
     }
 
-    fun QRScanner(){
+    private fun QRScanner(){
         var i = Intent(this, QRScannerActivity::class.java)
         startActivity(i)
     }
 
     private fun showCategories(categories: ArrayList<Category>){
-        val listView = findViewById<ListView>(com.example.inzynierka.R.id.categories_listview)
+        val listView = findViewById<ListView>(R.id.categories_listview)
         val adapter = MyCustomAdapter(this, categories)
         listView.adapter = adapter
 
-        listView.setOnItemClickListener { parent, view, position, id ->
+        listView.setOnItemClickListener { _, _, position, _ ->
             val element = adapter.getItemId(position) // The item that was clicked
 
             val sharedPreferences = getSharedPreferences("Category", Context.MODE_PRIVATE) //Saving chosen element
@@ -177,7 +157,9 @@ class CategoriesActivity : AppCompatActivity() {
             editor.putString("Id", categories.get(element.toInt()).id)
             editor.apply()
 
-            val intent = Intent(this, SplashScreen2Activity::class.java)
+            //val intent = Intent(this, SplashScreen2Activity::class.java)
+            val intent = Intent(this, ItemsActivity::class.java)
+            intent.putExtra("category", categories.get(element.toInt()) as Serializable)
             startActivity(intent)
         }
 
@@ -185,21 +167,16 @@ class CategoriesActivity : AppCompatActivity() {
 
     private class MyCustomAdapter(context: Context, itemList: ArrayList<Category>) : BaseAdapter()
     {
-        private val mContext: Context
-        private val mItemList: ArrayList<Category>
-
-        init{
-            mContext = context
-            mItemList = itemList
-        }
+        private val mContext: Context = context
+        private val mItemList: ArrayList<Category> = itemList
 
         override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
             val layoutInflater = LayoutInflater.from(mContext)
-            val rowMain = layoutInflater.inflate(com.example.inzynierka.R.layout.categories_row,parent, false)
+            val rowMain = layoutInflater.inflate(R.layout.categories_row,parent, false)
 
-            val Name = rowMain.findViewById<TextView>(com.example.inzynierka.R.id.name)
-            val Description = rowMain.findViewById<TextView>(com.example.inzynierka.R.id.description)
-            val Image = rowMain.findViewById<ImageView>(com.example.inzynierka.R.id.image)
+            val Name = rowMain.findViewById<TextView>(R.id.name)
+            val Description = rowMain.findViewById<TextView>(R.id.description)
+            val Image = rowMain.findViewById<ImageView>(R.id.image)
 
 
             Name.text = mItemList.get(position).name
