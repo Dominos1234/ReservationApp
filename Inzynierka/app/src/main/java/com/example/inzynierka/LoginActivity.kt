@@ -81,7 +81,7 @@ class LoginActivity : AppCompatActivity() {
             var User = gson.fromJson(data, User.UserInfo::class.java)
 
             if (User.code == "incorrectLogin"){
-                toast = Toast.makeText(applicationContext, "Incorrect username or password, try again", Toast.LENGTH_LONG)
+                toast = Toast.makeText(applicationContext, resources.getString(R.string.incorrect_login), Toast.LENGTH_LONG)
                 toast.setGravity(Gravity.TOP, 0, 140)
                 toast.show()
             }
@@ -99,7 +99,7 @@ class LoginActivity : AppCompatActivity() {
 
                 var login = User.data.login
 
-                toast = Toast.makeText(applicationContext, "Welcome $login", Toast.LENGTH_LONG)
+                toast = Toast.makeText(applicationContext, resources.getString(R.string.welcome) + " " + "$login", Toast.LENGTH_LONG)
                 toast.setGravity(Gravity.TOP, 0, 140)
                 toast.show()
 

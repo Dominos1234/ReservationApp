@@ -58,15 +58,10 @@ class ItemsActivity : AppCompatActivity() {
             var gson = Gson()
             var categoryJson = gson.fromJson(data, CategoryJson.CategoryInfo::class.java)
 
-
-            var notLogged = "Sorry, something went wrong, you were disconnected"
-            var missingPermissions = "Account permissions are not sufficient to perform this action."
-            var unknownError = "Unknown error occurred."
-
             when (categoryJson.code) { //send back to login
                 "notLogged" -> {
                     Logout()
-                    Toast.makeText(this, notLogged, Toast.LENGTH_LONG).show()
+                    Toast.makeText(this, resources.getString(R.string.not_logged), Toast.LENGTH_LONG).show()
                 }
                 "correct" -> {
                     var items = ArrayList<Item>()
@@ -88,8 +83,8 @@ class ItemsActivity : AppCompatActivity() {
 
                     showItems(items)
                 }
-                "missingPermissions" -> Toast.makeText(this, missingPermissions, Toast.LENGTH_LONG).show()
-                "unknownError" -> Toast.makeText(this, unknownError, Toast.LENGTH_LONG).show()
+                "missingPermissions" -> Toast.makeText(this, resources.getString(R.string.missing_permissions), Toast.LENGTH_LONG).show()
+                "unknownError" -> Toast.makeText(this, resources.getString(R.string.unknown_error), Toast.LENGTH_LONG).show()
             }
         }, failure = { error ->
             Log.e("Failure", error.toString())

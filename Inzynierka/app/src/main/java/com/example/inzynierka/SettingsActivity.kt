@@ -10,6 +10,10 @@ class SettingsActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        try {
+            this.supportActionBar!!.hide()
+        } catch (e: NullPointerException) {
+        }
         setContentView(R.layout.activity_settings)
     }
 
@@ -19,7 +23,7 @@ class SettingsActivity : AppCompatActivity() {
 
         editor.putString("language", "polish")
         editor.apply()
-        Toast.makeText(this,"Wybrany jezyk: Polski",Toast.LENGTH_SHORT).show()
+        Toast.makeText(this,resources.getString(R.string.polish),Toast.LENGTH_SHORT).show()
     }
     fun english(v: View){
         val sharedPreferences = getSharedPreferences("Settings", Context.MODE_PRIVATE)
@@ -27,7 +31,7 @@ class SettingsActivity : AppCompatActivity() {
 
         editor.putString("language", "english")
         editor.apply()
-        Toast.makeText(this,"Chosen language: English",Toast.LENGTH_SHORT).show()
+        Toast.makeText(this,resources.getString(R.string.english),Toast.LENGTH_SHORT).show()
     }
 
 }

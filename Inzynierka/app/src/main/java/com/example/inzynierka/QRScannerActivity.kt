@@ -94,7 +94,7 @@ class QRScannerActivity : AppCompatActivity() {
         when (requestCode){
             CAMERA_REQUEST_CODE -> {
                 if (grantResults.isEmpty() || grantResults[0] != PackageManager.PERMISSION_GRANTED) {
-                    Toast.makeText(this, "You need the camera permission to be able to use QR Scanner!", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this,  resources.getString(R.string.camera_permission), Toast.LENGTH_SHORT).show()
                 } else {
                     //success
                 }

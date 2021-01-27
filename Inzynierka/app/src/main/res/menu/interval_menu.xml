@@ -3,15 +3,15 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item android:id="@+id/menu_day"
-        android:title="Day"
-        app:showAsAction="never"
-        />
+          android:title="@string/menu_day"
+          app:showAsAction="never"
+    />
     <item android:id="@+id/menu_week"
-        android:title="Week"
-        app:showAsAction="never"
-        />
+          android:title="@string/menu_week"
+          app:showAsAction="never"
+    />
     <item android:id="@+id/menu_month"
-        android:title="Month"
-        app:showAsAction="never"
-        />
+          android:title="@string/menu_month"
+          app:showAsAction="never"
+    />
 </menu>

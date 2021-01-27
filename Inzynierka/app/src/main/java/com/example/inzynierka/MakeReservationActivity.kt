@@ -185,7 +185,7 @@ class MakeReservationActivity : AppCompatActivity(), DatePickerDialog.OnDateSetL
     @RequiresApi(Build.VERSION_CODES.O)
     fun tryBooking(v: View) {
         if (name.text.isEmpty()) {
-            Toast.makeText(this, "Name is required", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, resources.getString(R.string.name_required), Toast.LENGTH_SHORT).show()
             return
         }
 
@@ -211,7 +211,7 @@ class MakeReservationActivity : AppCompatActivity(), DatePickerDialog.OnDateSetL
             if (repeatEndDate.text.isEmpty()) {
                 Toast.makeText(
                     this,
-                    "If you want to create a repeating booking, please fill all fields",
+                    resources.getString(R.string.all_fields_repeating),
                     Toast.LENGTH_SHORT
                 ).show()
                 return
@@ -219,7 +219,7 @@ class MakeReservationActivity : AppCompatActivity(), DatePickerDialog.OnDateSetL
             if (repeatEndTime.text.isEmpty()) {
                 Toast.makeText(
                     this,
-                    "If you want to create a repeating booking, please fill all fields",
+                    resources.getString(R.string.all_fields_repeating),
                     Toast.LENGTH_SHORT
                 ).show()
                 return
@@ -227,7 +227,7 @@ class MakeReservationActivity : AppCompatActivity(), DatePickerDialog.OnDateSetL
             if (repeatIntervalUnit.text.isEmpty()) {
                 Toast.makeText(
                     this,
-                    "If you want to create a repeating booking, please fill all fields",
+                    resources.getString(R.string.all_fields_repeating),
                     Toast.LENGTH_SHORT
                 ).show()
                 return
@@ -235,7 +235,7 @@ class MakeReservationActivity : AppCompatActivity(), DatePickerDialog.OnDateSetL
             if (repeatInterval.text.isEmpty()) {
                 Toast.makeText(
                     this,
-                    "If you want to create a repeating booking, please fill all fields",
+                    resources.getString(R.string.all_fields_repeating),
                     Toast.LENGTH_SHORT
                 ).show()
                 return
@@ -384,24 +384,13 @@ class MakeReservationActivity : AppCompatActivity(), DatePickerDialog.OnDateSetL
 
             Log.d("Success", json)
 
-            var notLogged = "Sorry, something went wrong, you were disconnected"
-            var correct = "Successfully created a reservation"
-            var missingFields = "Technical error occurred: some fields are missing."
-            var invalidData = "Technical error occurred: invalid request data."
-            var entityAlreadyExists = "Entity with given key already exists."
-            var entityNotExists = "Error occurred: entity not exists."
-            var missingPermissions = "Account permissions are not sufficient to perform this action."
-            var masterAdminNotAllowed = "Master admin is not allowed for this action. Please login to admin account."
-            var bookingExistingInSameInterval = "Another booking already exists in given time interval."
-            var unknownError = "Unknown error occurred."
-
             when (Response.code){
                 "notLogged" -> {
                     Logout()
-                    Toast.makeText(this, notLogged, Toast.LENGTH_LONG).show()
+                    Toast.makeText(this,  resources.getString(R.string.not_logged), Toast.LENGTH_LONG).show()
                 }
                 "correct" -> {
-                    Toast.makeText(this, correct, Toast.LENGTH_LONG).show()
+                    Toast.makeText(this,  resources.getString(R.string.correct), Toast.LENGTH_LONG).show()
                     //go to Reservation
                     val intent = Intent(this, ReservationActivity::class.java)
                     intent.putExtra("day", mstartTime.dayOfMonth)
@@ -410,14 +399,14 @@ class MakeReservationActivity : AppCompatActivity(), DatePickerDialog.OnDateSetL
                     intent.putExtra("item", item as Serializable)
                     startActivity(intent)
                 }
-                "missingFields" -> Toast.makeText(this, missingFields, Toast.LENGTH_LONG).show()
-                "invalidData" -> Toast.makeText(this, invalidData, Toast.LENGTH_LONG).show()
-                "entityAlreadyExists" -> Toast.makeText(this, entityAlreadyExists, Toast.LENGTH_LONG).show()
-                "entityNotExists" -> Toast.makeText(this, entityNotExists, Toast.LENGTH_LONG).show()
-                "missingPermissions" -> Toast.makeText(this, missingPermissions, Toast.LENGTH_LONG).show()
-                "masterAdminNotAllowed" -> Toast.makeText(this, masterAdminNotAllowed, Toast.LENGTH_LONG).show()
-                "bookingExistingInSameInterval" -> Toast.makeText(this, bookingExistingInSameInterval, Toast.LENGTH_LONG).show()
-                "unknownError" -> Toast.makeText(this, unknownError, Toast.LENGTH_LONG).show()
+                "missingFields" -> Toast.makeText(this,  resources.getString(R.string.missing_fields), Toast.LENGTH_LONG).show()
+                "invalidData" -> Toast.makeText(this,  resources.getString(R.string.invalid_data), Toast.LENGTH_LONG).show()
+                "entityAlreadyExists" -> Toast.makeText(this,  resources.getString(R.string.entity_already_exists), Toast.LENGTH_LONG).show()
+                "entityNotExists" -> Toast.makeText(this,  resources.getString(R.string.entity_not_exists), Toast.LENGTH_LONG).show()
+                "missingPermissions" -> Toast.makeText(this,  resources.getString(R.string.missing_permissions), Toast.LENGTH_LONG).show()
+                "masterAdminNotAllowed" -> Toast.makeText(this,  resources.getString(R.string.master_admin_not_allowed), Toast.LENGTH_LONG).show()
+                "bookingExistingInSameInterval" -> Toast.makeText(this,  resources.getString(R.string.booking_existing_in_same_interval), Toast.LENGTH_LONG).show()
+                "unknownError" -> Toast.makeText(this,  resources.getString(R.string.unknown_error), Toast.LENGTH_LONG).show()
             }
 
         }, failure = { error ->
@@ -431,7 +420,7 @@ class MakeReservationActivity : AppCompatActivity(), DatePickerDialog.OnDateSetL
         startActivity(i)
     }
 
-    fun clearSharedPreferences(){
+    private fun clearSharedPreferences(){
         val sharedPreferences = getSharedPreferences("User", Context.MODE_PRIVATE)
         val editor = sharedPreferences.edit()
 
