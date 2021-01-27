@@ -4,26 +4,37 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background_lightblue"
     tools:context=".QRScannerActivity">
 
     <com.budiyev.android.codescanner.CodeScannerView
+        android:id="@+id/scanner_view"
         android:layout_width="match_parent"
         android:layout_height="400dp"
-        android:id="@+id/scanner_view"
-        app:autoFocusButtonColor="@android:color/white"
-        app:autoFocusButtonVisible="true"
-        app:flashButtonColor="@android:color/white"
-        app:flashButtonVisible="true"
-        app:maskColor="#6C000000" />
-
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="-3dp"
+        android:layout_marginTop="126dp" android:layout_marginEnd="0dp"
+        app:autoFocusButtonColor="#000000"
+        app:autoFocusButtonVisible="true" app:flashButtonColor="#000000" app:flashButtonVisible="true"
+        app:maskColor="#F2F2F2"/>
     <TextView
         android:id="@+id/tv_textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/scanner_view"
         android:layout_centerHorizontal="true"
-        android:layout_margin="20dp"
-        android:text="Scan QR code from a class..."
-        android:textColor="@android:color/black" />
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="36dp" android:layout_marginEnd="20dp" android:layout_marginBottom="20dp"
+        android:text="@string/qr_description" android:textAlignment="center" android:textColor="@android:color/black"
+        android:textSize="18sp"/>
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" android:layout_alignParentStart="true" android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true" android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp" android:text="@string/qr_scan" android:textAlignment="center"
+        android:textColor="#FFFFFF" android:textSize="36sp"/>
 
 </RelativeLayout>

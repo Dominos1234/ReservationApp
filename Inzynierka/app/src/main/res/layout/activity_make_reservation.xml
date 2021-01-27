@@ -238,12 +238,13 @@
         android:id="@+id/sendReservation"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Create Booking"
         android:layout_marginTop="20dp"
+        android:background="@drawable/blue_button"
         android:onClick="tryBooking"
+        android:text="Create Booking"
+        android:textColor="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/repeatTimes" />
+        app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@+id/repeatTimes"/>
 
     <TextView
         android:id="@+id/textView2"

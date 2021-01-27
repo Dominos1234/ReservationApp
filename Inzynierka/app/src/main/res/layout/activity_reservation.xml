@@ -1,1276 +1,1276 @@
 <?xml version="1_0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas_android_com/apk/res-auto"
-    xmlns:tools="http://schemas_android_com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="_ReservationActivity">
+                                                   xmlns:app="http://schemas_android_com/apk/res-auto"
+                                                   xmlns:tools="http://schemas_android_com/tools"
+                                                   android:layout_width="match_parent"
+                                                   android:layout_height="match_parent"
+                                                   android:background="#F2F2F2" tools:context="_ReservationActivity">
 
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:scrollbars="vertical"
         android:layout_weight="1"
+        android:background="#F2F2F2"
+        android:scrollbars="vertical"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent">
         <TableLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            >
+            android:background="#F2F2F2">
 
             <TableRow
-                android:background="@drawable/border"
+                android:background="#F2F2F2"
                 android:weightSum="1">
 
                 <TextView
                     android:id="@+id/row0"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="25dp"
-                    android:onClick="makeReservation"
+                    android:layout_weight="1"
+                    android:background="#F2F2F2"
                     android:gravity="center"
-                    android:textAlignment="center"
-                     />
+                    android:onClick="makeReservation"
+                    android:textAlignment="center"/>
             </TableRow>
 
             <TableRow
-                android:background="@drawable/border2"
+                android:background="#F2F2F2"
                 android:weightSum="1">
 
                 <TextView
                     android:id="@+id/row0_1"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="25dp"
-                    android:onClick="makeReservation"
-                    />
+                    android:layout_weight="1"
+                    android:background="#F2F2F2"
+                    android:onClick="makeReservation"/>
             </TableRow>
 
             <TableRow
-                android:background="@drawable/border2"
+                android:background="#F2F2F2"
                 android:weightSum="1">
 
                 <TextView
                     android:id="@+id/row0_2"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="25dp"
-                    android:onClick="makeReservation"
-                    />
+                    android:layout_weight="1"
+                    android:background="#F2F2F2"
+                    android:onClick="makeReservation"/>
             </TableRow>
 
             <TableRow
-                android:background="@drawable/border2"
+                android:background="#F2F2F2"
                 android:weightSum="1">
 
                 <TextView
                     android:id="@+id/row0_3"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="25dp"
-                    android:onClick="makeReservation"
-                    />
+                    android:layout_weight="1"
+                    android:background="#F2F2F2"
+                    android:onClick="makeReservation"/>
             </TableRow>
 
             <TableRow
-                android:background="@drawable/border"
+                android:background="#F2F2F2"
                 android:weightSum="1">
 
                 <TextView
                     android:id="@+id/row1"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="25dp"
-                    android:onClick="makeReservation"
+                    android:layout_weight="1"
+                    android:background="#F2F2F2"
                     android:gravity="center"
-                    android:textAlignment="center" />
+                    android:onClick="makeReservation" android:textAlignment="center"/>
             </TableRow>
 
             <TableRow
-                android:background="@drawable/border2"
+                android:background="#F2F2F2"
                 android:weightSum="1">
 
                 <TextView
                     android:id="@+id/row1_1"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="25dp"
-                    android:onClick="makeReservation"
-                    />
+                    android:layout_weight="1"
+                    android:background="#F2F2F2"
+                    android:onClick="makeReservation"/>
             </TableRow>
 
             <TableRow
-                android:background="@drawable/border2"
+                android:background="#F2F2F2"
                 android:weightSum="1">
 
                 <TextView
                     android:id="@+id/row1_2"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="25dp"
-                    android:onClick="makeReservation"
-                    />
+                    android:layout_weight="1"
+                    android:background="#F2F2F2"
+                    android:onClick="makeReservation"/>
             </TableRow>
 
             <TableRow
-                android:background="@drawable/border2"
+                android:background="#F2F2F2"
                 android:weightSum="1">
 
                 <TextView
                     android:id="@+id/row1_3"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="25dp"
-                    android:onClick="makeReservation"
-                    />
+                    android:layout_weight="1"
+                    android:background="#F2F2F2"
+                    android:onClick="makeReservation"/>
             </TableRow>
 
             <TableRow
-                android:background="@drawable/border"
+                android:background="#F2F2F2"
                 android:weightSum="1">
                 <TextView
                     android:id="@+id/row2"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="25dp"
-                    android:onClick="makeReservation"
+                    android:layout_weight="1"
+                    android:background="#F2F2F2"
                     android:gravity="center"
-                    android:textAlignment="center" />
+                    android:onClick="makeReservation" android:textAlignment="center"/>
             </TableRow>
 
             <TableRow
-                android:background="@drawable/border2"
+                android:background="#F2F2F2"
                 android:weightSum="1">
 
                 <TextView
                     android:id="@+id/row2_1"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="25dp"
-                    android:onClick="makeReservation"
-                    />
+                    android:layout_weight="1"
+                    android:background="#F2F2F2"
+                    android:onClick="makeReservation"/>
             </TableRow>
 
             <TableRow
-                android:background="@drawable/border2"
+                android:background="#F2F2F2"
                 android:weightSum="1">
 
                 <TextView
                     android:id="@+id/row2_2"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="25dp"
-                    android:onClick="makeReservation"
-                    />
+                    android:layout_weight="1"
+                    android:background="#F2F2F2"
+                    android:onClick="makeReservation"/>
             </TableRow>
 
             <TableRow
-                android:background="@drawable/border2"
+                android:background="#F2F2F2"
                 android:weightSum="1">
 
                 <TextView
                     android:id="@+id/row2_3"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="25dp"
-                    android:onClick="makeReservation"
-                    />
+                    android:layout_weight="1"
+                    android:background="#F2F2F2"
+                    android:onClick="makeReservation"/>
             </TableRow>
 
             <TableRow
-                android:background="@drawable/border"
+                android:background="#F2F2F2"
                 android:weightSum="1">
                 <TextView
                     android:id="@+id/row3"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="25dp"
-                    android:onClick="makeReservation"
+                    android:layout_weight="1"
+                    android:background="#F2F2F2"
                     android:gravity="center"
-                    android:textAlignment="center" />
+                    android:onClick="makeReservation" android:textAlignment="center"/>
             </TableRow>
 
             <TableRow
-                android:background="@drawable/border2"
+                android:background="#F2F2F2"
                 android:weightSum="1">
 
                 <TextView
                     android:id="@+id/row3_1"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="25dp"
-                    android:onClick="makeReservation"
-                    />
+                    android:layout_weight="1"
+                    android:background="#F2F2F2"
+                    android:onClick="makeReservation"/>
             </TableRow>
 
             <TableRow
-                android:background="@drawable/border2"
+                android:background="#F2F2F2"
                 android:weightSum="1">
 
                 <TextView
                     android:id="@+id/row3_2"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="25dp"
-                    android:onClick="makeReservation"
-                    />
+                    android:layout_weight="1"
+                    android:background="#F2F2F2"
+                    android:onClick="makeReservation"/>
             </TableRow>
 
             <TableRow
-                android:background="@drawable/border2"
+                android:background="#F2F2F2"
                 android:weightSum="1">
 
                 <TextView
                     android:id="@+id/row3_3"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="25dp"
-                    android:onClick="makeReservation"
-                    />
+                    android:layout_weight="1"
+                    android:background="#F2F2F2"
+                    android:onClick="makeReservation"/>
             </TableRow>
 
             <TableRow
-                android:background="@drawable/border"
+                android:background="#F2F2F2"
                 android:weightSum="1">
                 <TextView
                     android:id="@+id/row4"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="25dp"
-                    android:onClick="makeReservation"
+                    android:layout_weight="1"
+                    android:background="#F2F2F2"
                     android:gravity="center"
-                    android:textAlignment="center"/>
+                    android:onClick="makeReservation" android:textAlignment="center"/>
             </TableRow>
 
             <TableRow
-                android:background="@drawable/border2"
+                android:background="#F2F2F2"
                 android:weightSum="1">
 
                 <TextView
                     android:id="@+id/row4_1"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="25dp"
-                    android:onClick="makeReservation"
-                    />
+                    android:layout_weight="1"
+                    android:background="#F2F2F2"
+                    android:onClick="makeReservation"/>
             </TableRow>
 
             <TableRow
-                android:background="@drawable/border2"
+                android:background="#F2F2F2"
                 android:weightSum="1">
 
                 <TextView
                     android:id="@+id/row4_2"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="25dp"
-                    android:onClick="makeReservation"
-                    />
+                    android:layout_weight="1"
+                    android:background="#F2F2F2"
+                    android:onClick="makeReservation"/>
             </TableRow>
 
             <TableRow
-                android:background="@drawable/border2"
+                android:background="#F2F2F2"
                 android:weightSum="1">
 
                 <TextView
                     android:id="@+id/row4_3"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="25dp"
-                    android:onClick="makeReservation"
-                    />
+                    android:layout_weight="1"
+                    android:background="#F2F2F2"
+                    android:onClick="makeReservation"/>
             </TableRow>
 
             <TableRow
-                android:background="@drawable/border"
+                android:background="#F2F2F2"
                 android:weightSum="1">
                 <TextView
                     android:id="@+id/row5"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="25dp"
-                    android:onClick="makeReservation"
+                    android:layout_weight="1"
+                    android:background="#F2F2F2"
                     android:gravity="center"
-                    android:textAlignment="center" />
+                    android:onClick="makeReservation" android:textAlignment="center"/>
             </TableRow>
 
             <TableRow
-                android:background="@drawable/border2"
+                android:background="#F2F2F2"
                 android:weightSum="1">
 
                 <TextView
                     android:id="@+id/row5_1"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="25dp"
-                    android:onClick="makeReservation"
-                    />
+                    android:layout_weight="1"
+                    android:background="#F2F2F2"
+                    android:onClick="makeReservation"/>
             </TableRow>
 
             <TableRow
-                android:background="@drawable/border2"
+                android:background="#F2F2F2"
                 android:weightSum="1">
 
                 <TextView
                     android:id="@+id/row5_2"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="25dp"
-                    android:onClick="makeReservation"
-                    />
+                    android:layout_weight="1"
+                    android:background="#F2F2F2"
+                    android:onClick="makeReservation"/>
             </TableRow>
 
             <TableRow
-                android:background="@drawable/border2"
+                android:background="#F2F2F2"
                 android:weightSum="1">
 
                 <TextView
                     android:id="@+id/row5_3"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="25dp"
-                    android:onClick="makeReservation"
-                    />
+                    android:layout_weight="1"
+                    android:background="#F2F2F2"
+                    android:onClick="makeReservation"/>
             </TableRow>
 
             <TableRow
-                android:background="@drawable/border"
+                android:background="#F2F2F2"
                 android:weightSum="1">
                 <TextView
                     android:id="@+id/row6"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="25dp"
-                    android:onClick="makeReservation"
+                    android:layout_weight="1"
+                    android:background="#F2F2F2"
                     android:gravity="center"
-                    android:textAlignment="center" />
+                    android:onClick="makeReservation" android:textAlignment="center"/>
             </TableRow>
 
             <TableRow
-                android:background="@drawable/border2"
+                android:background="#F2F2F2"
                 android:weightSum="1">
 
                 <TextView
                     android:id="@+id/row6_1"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="25dp"
-                    android:onClick="makeReservation"
-                    />
+                    android:layout_weight="1"
+                    android:background="#F2F2F2"
+                    android:onClick="makeReservation"/>
             </TableRow>
 
             <TableRow
-                android:background="@drawable/border2"
+                android:background="#F2F2F2"
                 android:weightSum="1">
 
                 <TextView
                     android:id="@+id/row6_2"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="25dp"
-                    android:onClick="makeReservation"
-                    />
+                    android:layout_weight="1"
+                    android:background="#F2F2F2"
+                    android:onClick="makeReservation"/>
             </TableRow>
 
             <TableRow
-                android:background="@drawable/border2"
+                android:background="#F2F2F2"
                 android:weightSum="1">
 
                 <TextView
                     android:id="@+id/row6_3"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="25dp"
-                    android:onClick="makeReservation"
-                    />
+                    android:layout_weight="1"
+                    android:background="#F2F2F2"
+                    android:onClick="makeReservation"/>
             </TableRow>
 
             <TableRow
-                android:background="@drawable/border"
+                android:background="#F2F2F2"
                 android:weightSum="1">
                 <TextView
                     android:id="@+id/row7"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="25dp"
-                    android:onClick="makeReservation"
+                    android:layout_weight="1"
+                    android:background="#F2F2F2"
                     android:gravity="center"
-                    android:textAlignment="center" />
+                    android:onClick="makeReservation" android:textAlignment="center"/>
             </TableRow>
 
             <TableRow
-                android:background="@drawable/border2"
+                android:background="#F2F2F2"
                 android:weightSum="1">
 
                 <TextView
                     android:id="@+id/row7_1"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="25dp"
-                    android:onClick="makeReservation"
-                    />
+                    android:layout_weight="1"
+                    android:background="#F2F2F2"
+                    android:onClick="makeReservation"/>
             </TableRow>
 
             <TableRow
-                android:background="@drawable/border2"
+                android:background="#F2F2F2"
                 android:weightSum="1">
 
                 <TextView
                     android:id="@+id/row7_2"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="25dp"
-                    android:onClick="makeReservation"
-                    />
+                    android:layout_weight="1"
+                    android:background="#F2F2F2"
+                    android:onClick="makeReservation"/>
             </TableRow>
 
             <TableRow
-                android:background="@drawable/border2"
+                android:background="#F2F2F2"
                 android:weightSum="1">
 
                 <TextView
                     android:id="@+id/row7_3"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="25dp"
-                    android:onClick="makeReservation"
-                    />
+                    android:layout_weight="1"
+                    android:background="#F2F2F2"
+                    android:onClick="makeReservation"/>
             </TableRow>
 
             <TableRow
-                android:background="@drawable/border"
+                android:background="#F2F2F2"
                 android:weightSum="1">
                 <TextView
                     android:id="@+id/row8"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="25dp"
-                    android:onClick="makeReservation"
+                    android:layout_weight="1"
+                    android:background="#F2F2F2"
                     android:gravity="center"
-                    android:textAlignment="center" />
+                    android:onClick="makeReservation" android:textAlignment="center"/>
             </TableRow>
 
             <TableRow
-                android:background="@drawable/border2"
+                android:background="#F2F2F2"
                 android:weightSum="1">
 
                 <TextView
                     android:id="@+id/row8_1"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="25dp"
-                    android:onClick="makeReservation"
-                    />
+                    android:layout_weight="1"
+                    android:background="#F2F2F2"
+                    android:onClick="makeReservation"/>
             </TableRow>
 
             <TableRow
-                android:background="@drawable/border2"
+                android:background="#F2F2F2"
                 android:weightSum="1">
 
                 <TextView
                     android:id="@+id/row8_2"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="25dp"
-                    android:onClick="makeReservation"
-                    />
+                    android:layout_weight="1"
+                    android:background="#F2F2F2"
+                    android:onClick="makeReservation"/>
             </TableRow>
 
             <TableRow
-                android:background="@drawable/border2"
+                android:background="#F2F2F2"
                 android:weightSum="1">
 
                 <TextView
                     android:id="@+id/row8_3"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="25dp"
-                    android:onClick="makeReservation"
-                    />
+                    android:layout_weight="1"
+                    android:background="#F2F2F2"
+                    android:onClick="makeReservation"/>
             </TableRow>
 
             <TableRow
-                android:background="@drawable/border"
+                android:background="#F2F2F2"
                 android:weightSum="1">
                 <TextView
                     android:id="@+id/row9"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="25dp"
-                    android:onClick="makeReservation"
+                    android:layout_weight="1"
+                    android:background="#F2F2F2"
                     android:gravity="center"
-                    android:textAlignment="center" />
+                    android:onClick="makeReservation" android:textAlignment="center"/>
             </TableRow>
 
             <TableRow
-                android:background="@drawable/border2"
+                android:background="#F2F2F2"
                 android:weightSum="1">
 
                 <TextView
                     android:id="@+id/row9_1"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="25dp"
-                    android:onClick="makeReservation"
-                    />
+                    android:layout_weight="1"
+                    android:background="#F2F2F2"
+                    android:onClick="makeReservation"/>
             </TableRow>
 
             <TableRow
-                android:background="@drawable/border2"
+                android:background="#F2F2F2"
                 android:weightSum="1">
 
                 <TextView
                     android:id="@+id/row9_2"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="25dp"
-                    android:onClick="makeReservation"
-                    />
+                    android:layout_weight="1"
+                    android:background="#F2F2F2"
+                    android:onClick="makeReservation"/>
             </TableRow>
 
             <TableRow
-                android:background="@drawable/border2"
+                android:background="#F2F2F2"
                 android:weightSum="1">
 
                 <TextView
                     android:id="@+id/row9_3"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="25dp"
-                    android:onClick="makeReservation"
-                    />
+                    android:layout_weight="1"
+                    android:background="#F2F2F2"
+                    android:onClick="makeReservation"/>
 
             </TableRow>
 
             <TableRow
-                android:background="@drawable/border"
+                android:background="#F2F2F2"
                 android:weightSum="1">
                 <TextView
                     android:id="@+id/row10"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="25dp"
-                    android:onClick="makeReservation"
+                    android:layout_weight="1"
+                    android:background="#F2F2F2"
                     android:gravity="center"
-                    android:textAlignment="center" />
+                    android:onClick="makeReservation" android:textAlignment="center"/>
             </TableRow>
 
             <TableRow
-                android:background="@drawable/border2"
+                android:background="#F2F2F2"
                 android:weightSum="1">
 
                 <TextView
                     android:id="@+id/row10_1"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="25dp"
-                    android:onClick="makeReservation"
-                    />
+                    android:layout_weight="1"
+                    android:background="#F2F2F2"
+                    android:onClick="makeReservation"/>
             </TableRow>
 
             <TableRow
-                android:background="@drawable/border2"
+                android:background="#F2F2F2"
                 android:weightSum="1">
 
                 <TextView
                     android:id="@+id/row10_2"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="25dp"
-                    android:onClick="makeReservation"
-                    />
+                    android:layout_weight="1"
+                    android:background="#F2F2F2"
+                    android:onClick="makeReservation"/>
             </TableRow>
 
             <TableRow
-                android:background="@drawable/border2"
+                android:background="#F2F2F2"
                 android:weightSum="1">
 
                 <TextView
                     android:id="@+id/row10_3"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="25dp"
-                    android:onClick="makeReservation"
-                    />
+                    android:layout_weight="1"
+                    android:background="#F2F2F2"
+                    android:onClick="makeReservation"/>
             </TableRow>
 
             <TableRow
-                android:background="@drawable/border"
+                android:background="#F2F2F2"
                 android:weightSum="1">
                 <TextView
                     android:id="@+id/row11"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="25dp"
-                    android:onClick="makeReservation"
+                    android:layout_weight="1"
+                    android:background="#F2F2F2"
                     android:gravity="center"
-                    android:textAlignment="center" />
+                    android:onClick="makeReservation" android:textAlignment="center"/>
             </TableRow>
 
             <TableRow
-                android:background="@drawable/border2"
+                android:background="#F2F2F2"
                 android:weightSum="1">
 
                 <TextView
                     android:id="@+id/row11_1"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="25dp"
-                    android:onClick="makeReservation"
-                    />
+                    android:layout_weight="1"
+                    android:background="#F2F2F2"
+                    android:onClick="makeReservation"/>
             </TableRow>
 
             <TableRow
-                android:background="@drawable/border2"
+                android:background="#F2F2F2"
                 android:weightSum="1">
 
                 <TextView
                     android:id="@+id/row11_2"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="25dp"
-                    android:onClick="makeReservation"
-                    />
+                    android:layout_weight="1"
+                    android:background="#F2F2F2"
+                    android:onClick="makeReservation"/>
             </TableRow>
 
             <TableRow
-                android:background="@drawable/border2"
+                android:background="#F2F2F2"
                 android:weightSum="1">
 
                 <TextView
                     android:id="@+id/row11_3"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="25dp"
-                    android:onClick="makeReservation"
-                    />
+                    android:layout_weight="1"
+                    android:background="#F2F2F2"
+                    android:onClick="makeReservation"/>
             </TableRow>
 
             <TableRow
-                android:background="@drawable/border"
+                android:background="#F2F2F2"
                 android:weightSum="1">
                 <TextView
                     android:id="@+id/row12"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="25dp"
-                    android:onClick="makeReservation"
+                    android:layout_weight="1"
+                    android:background="#F2F2F2"
                     android:gravity="center"
-                    android:textAlignment="center" />
+                    android:onClick="makeReservation" android:textAlignment="center"/>
             </TableRow>
 
             <TableRow
-                android:background="@drawable/border2"
+                android:background="#F2F2F2"
                 android:weightSum="1">
 
                 <TextView
                     android:id="@+id/row12_1"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="25dp"
-                    android:onClick="makeReservation"
-                    />
+                    android:layout_weight="1"
+                    android:background="#F2F2F2"
+                    android:onClick="makeReservation"/>
             </TableRow>
 
             <TableRow
-                android:background="@drawable/border2"
+                android:background="#F2F2F2"
                 android:weightSum="1">
 
                 <TextView
                     android:id="@+id/row12_2"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="25dp"
-                    android:onClick="makeReservation"
-                    />
+                    android:layout_weight="1"
+                    android:background="#F2F2F2"
+                    android:onClick="makeReservation"/>
             </TableRow>
 
             <TableRow
-                android:background="@drawable/border2"
+                android:background="#F2F2F2"
                 android:weightSum="1">
 
                 <TextView
                     android:id="@+id/row12_3"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="25dp"
-                    android:onClick="makeReservation"
-                    />
+                    android:layout_weight="1"
+                    android:background="#F2F2F2"
+                    android:onClick="makeReservation"/>
             </TableRow>
 
             <TableRow
-                android:background="@drawable/border"
+                android:background="#F2F2F2"
                 android:weightSum="1">
                 <TextView
                     android:id="@+id/row13"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="25dp"
-                    android:onClick="makeReservation"
+                    android:layout_weight="1"
+                    android:background="#F2F2F2"
                     android:gravity="center"
-                    android:textAlignment="center" />
+                    android:onClick="makeReservation" android:textAlignment="center"/>
             </TableRow>
 
             <TableRow
-                android:background="@drawable/border2"
+                android:background="#F2F2F2"
                 android:weightSum="1">
 
                 <TextView
                     android:id="@+id/row13_1"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="25dp"
-                    android:onClick="makeReservation"
-                    />
+                    android:layout_weight="1"
+                    android:background="#F2F2F2"
+                    android:onClick="makeReservation"/>
             </TableRow>
 
             <TableRow
-                android:background="@drawable/border2"
+                android:background="#F2F2F2"
                 android:weightSum="1">
 
                 <TextView
                     android:id="@+id/row13_2"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="25dp"
-                    android:onClick="makeReservation"
-                    />
+                    android:layout_weight="1"
+                    android:background="#F2F2F2"
+                    android:onClick="makeReservation"/>
             </TableRow>
 
             <TableRow
-                android:background="@drawable/border2"
+                android:background="#F2F2F2"
                 android:weightSum="1">
 
                 <TextView
                     android:id="@+id/row13_3"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="25dp"
-                    android:onClick="makeReservation"
-                    />
+                    android:layout_weight="1"
+                    android:background="#F2F2F2"
+                    android:onClick="makeReservation"/>
             </TableRow>
 
             <TableRow
-                android:background="@drawable/border"
+                android:background="#F2F2F2"
                 android:weightSum="1">
                 <TextView
                     android:id="@+id/row14"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="25dp"
-                    android:onClick="makeReservation"
+                    android:layout_weight="1"
+                    android:background="#F2F2F2"
                     android:gravity="center"
-                    android:textAlignment="center" />
+                    android:onClick="makeReservation" android:textAlignment="center"/>
             </TableRow>
 
             <TableRow
-                android:background="@drawable/border2"
+                android:background="#F2F2F2"
                 android:weightSum="1">
 
                 <TextView
                     android:id="@+id/row14_1"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="25dp"
-                    android:onClick="makeReservation"
-                    />
+                    android:layout_weight="1"
+                    android:background="#F2F2F2"
+                    android:onClick="makeReservation"/>
             </TableRow>
 
             <TableRow
-                android:background="@drawable/border2"
+                android:background="#F2F2F2"
                 android:weightSum="1">
 
                 <TextView
                     android:id="@+id/row14_2"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="25dp"
-                    android:onClick="makeReservation"
-                    />
+                    android:layout_weight="1"
+                    android:background="#F2F2F2"
+                    android:onClick="makeReservation"/>
             </TableRow>
 
             <TableRow
-                android:background="@drawable/border2"
+                android:background="#F2F2F2"
                 android:weightSum="1">
 
                 <TextView
                     android:id="@+id/row14_3"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="25dp"
-                    android:onClick="makeReservation"
-                    />
+                    android:layout_weight="1"
+                    android:background="#F2F2F2"
+                    android:onClick="makeReservation"/>
             </TableRow>
 
             <TableRow
-                android:background="@drawable/border"
+                android:background="#F2F2F2"
                 android:weightSum="1">
                 <TextView
                     android:id="@+id/row15"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="25dp"
-                    android:onClick="makeReservation"
+                    android:layout_weight="1"
+                    android:background="#F2F2F2"
                     android:gravity="center"
-                    android:textAlignment="center" />
+                    android:onClick="makeReservation" android:textAlignment="center"/>
             </TableRow>
 
             <TableRow
-                android:background="@drawable/border2"
+                android:background="#F2F2F2"
                 android:weightSum="1">
 
                 <TextView
                     android:id="@+id/row15_1"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="25dp"
-                    android:onClick="makeReservation"
-                    />
+                    android:layout_weight="1"
+                    android:background="#F2F2F2"
+                    android:onClick="makeReservation"/>
             </TableRow>
 
             <TableRow
-                android:background="@drawable/border2"
+                android:background="#F2F2F2"
                 android:weightSum="1">
 
                 <TextView
                     android:id="@+id/row15_2"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="25dp"
-                    android:onClick="makeReservation"
-                    />
+                    android:layout_weight="1"
+                    android:background="#F2F2F2"
+                    android:onClick="makeReservation"/>
             </TableRow>
 
             <TableRow
-                android:background="@drawable/border2"
+                android:background="#F2F2F2"
                 android:weightSum="1">
 
                 <TextView
                     android:id="@+id/row15_3"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="25dp"
-                    android:onClick="makeReservation"
-                    />
+                    android:layout_weight="1"
+                    android:background="#F2F2F2"
+                    android:onClick="makeReservation"/>
             </TableRow>
 
             <TableRow
-                android:background="@drawable/border"
+                android:background="#F2F2F2"
                 android:weightSum="1">
                 <TextView
                     android:id="@+id/row16"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="25dp"
-                    android:onClick="makeReservation"
+                    android:layout_weight="1"
+                    android:background="#F2F2F2"
                     android:gravity="center"
-                    android:textAlignment="center" />
+                    android:onClick="makeReservation" android:textAlignment="center"/>
             </TableRow>
 
             <TableRow
-                android:background="@drawable/border2"
+                android:background="#F2F2F2"
                 android:weightSum="1">
 
                 <TextView
                     android:id="@+id/row16_1"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="25dp"
-                    android:onClick="makeReservation"
-                    />
+                    android:layout_weight="1"
+                    android:background="#F2F2F2"
+                    android:onClick="makeReservation"/>
             </TableRow>
 
             <TableRow
-                android:background="@drawable/border2"
+                android:background="#F2F2F2"
                 android:weightSum="1">
 
                 <TextView
                     android:id="@+id/row16_2"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="25dp"
-                    android:onClick="makeReservation"
-                    />
+                    android:layout_weight="1"
+                    android:background="#F2F2F2"
+                    android:onClick="makeReservation"/>
             </TableRow>
 
             <TableRow
-                android:background="@drawable/border2"
+                android:background="#F2F2F2"
                 android:weightSum="1">
 
                 <TextView
                     android:id="@+id/row16_3"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="25dp"
-                    android:onClick="makeReservation"
-                    />
+                    android:layout_weight="1"
+                    android:background="#F2F2F2"
+                    android:onClick="makeReservation"/>
             </TableRow>
 
             <TableRow
-                android:background="@drawable/border"
+                android:background="#F2F2F2"
                 android:weightSum="1">
                 <TextView
                     android:id="@+id/row17"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="25dp"
-                    android:onClick="makeReservation"
+                    android:layout_weight="1"
+                    android:background="#F2F2F2"
                     android:gravity="center"
-                    android:textAlignment="center" />
+                    android:onClick="makeReservation" android:textAlignment="center"/>
             </TableRow>
 
             <TableRow
-                android:background="@drawable/border2"
+                android:background="#F2F2F2"
                 android:weightSum="1">
 
                 <TextView
                     android:id="@+id/row17_1"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="25dp"
-                    android:onClick="makeReservation"
-                    />
+                    android:layout_weight="1"
+                    android:background="#F2F2F2"
+                    android:onClick="makeReservation"/>
             </TableRow>
 
             <TableRow
-                android:background="@drawable/border2"
+                android:background="#F2F2F2"
                 android:weightSum="1">
 
                 <TextView
                     android:id="@+id/row17_2"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="25dp"
-                    android:onClick="makeReservation"
-                    />
+                    android:layout_weight="1"
+                    android:background="#F2F2F2"
+                    android:onClick="makeReservation"/>
             </TableRow>
 
             <TableRow
-                android:background="@drawable/border2"
+                android:background="#F2F2F2"
                 android:weightSum="1">
 
                 <TextView
                     android:id="@+id/row17_3"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="25dp"
-                    android:onClick="makeReservation"
-                    />
+                    android:layout_weight="1"
+                    android:background="#F2F2F2"
+                    android:onClick="makeReservation"/>
             </TableRow>
 
             <TableRow
-                android:background="@drawable/border"
+                android:background="#F2F2F2"
                 android:weightSum="1">
                 <TextView
                     android:id="@+id/row18"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="25dp"
-                    android:onClick="makeReservation"
+                    android:layout_weight="1"
+                    android:background="#F2F2F2"
                     android:gravity="center"
-                    android:textAlignment="center" />
+                    android:onClick="makeReservation" android:textAlignment="center"/>
             </TableRow>
 
             <TableRow
-                android:background="@drawable/border2"
+                android:background="#F2F2F2"
                 android:weightSum="1">
 
                 <TextView
                     android:id="@+id/row18_1"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="25dp"
-                    android:onClick="makeReservation"
-                    />
+                    android:layout_weight="1"
+                    android:background="#F2F2F2"
+                    android:onClick="makeReservation"/>
             </TableRow>
 
             <TableRow
-                android:background="@drawable/border2"
+                android:background="#F2F2F2"
                 android:weightSum="1">
 
                 <TextView
                     android:id="@+id/row18_2"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="25dp"
-                    android:onClick="makeReservation"
-                    />
+                    android:layout_weight="1"
+                    android:background="#F2F2F2"
+                    android:onClick="makeReservation"/>
             </TableRow>
 
             <TableRow
-                android:background="@drawable/border2"
+                android:background="#F2F2F2"
                 android:weightSum="1">
 
                 <TextView
                     android:id="@+id/row18_3"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="25dp"
-                    android:onClick="makeReservation"
-                    />
+                    android:layout_weight="1"
+                    android:background="#F2F2F2"
+                    android:onClick="makeReservation"/>
             </TableRow>
 
             <TableRow
-                android:background="@drawable/border"
+                android:background="#F2F2F2"
                 android:weightSum="1">
                 <TextView
                     android:id="@+id/row19"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="25dp"
-                    android:onClick="makeReservation"
+                    android:layout_weight="1"
+                    android:background="#F2F2F2"
                     android:gravity="center"
-                    android:textAlignment="center" />
+                    android:onClick="makeReservation" android:textAlignment="center"/>
             </TableRow>
 
             <TableRow
-                android:background="@drawable/border2"
+                android:background="#F2F2F2"
                 android:weightSum="1">
 
                 <TextView
                     android:id="@+id/row19_1"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="25dp"
-                    android:onClick="makeReservation"
-                    />
+                    android:layout_weight="1"
+                    android:background="#F2F2F2"
+                    android:onClick="makeReservation"/>
             </TableRow>
 
             <TableRow
-                android:background="@drawable/border2"
+                android:background="#F2F2F2"
                 android:weightSum="1">
 
                 <TextView
                     android:id="@+id/row19_2"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="25dp"
-                    android:onClick="makeReservation"
-                    />
+                    android:layout_weight="1"
+                    android:background="#F2F2F2"
+                    android:onClick="makeReservation"/>
             </TableRow>
 
             <TableRow
-                android:background="@drawable/border2"
+                android:background="#F2F2F2"
                 android:weightSum="1">
 
                 <TextView
                     android:id="@+id/row19_3"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="25dp"
-                    android:onClick="makeReservation"
-                    />
+                    android:layout_weight="1"
+                    android:background="#F2F2F2"
+                    android:onClick="makeReservation"/>
             </TableRow>
 
             <TableRow
-                android:background="@drawable/border"
+                android:background="#F2F2F2"
                 android:weightSum="1">
                 <TextView
                     android:id="@+id/row20"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="25dp"
-                    android:onClick="makeReservation"
+                    android:layout_weight="1"
+                    android:background="#F2F2F2"
                     android:gravity="center"
-                    android:textAlignment="center" />
+                    android:onClick="makeReservation" android:textAlignment="center"/>
             </TableRow>
 
             <TableRow
-                android:background="@drawable/border2"
+                android:background="#F2F2F2"
                 android:weightSum="1">
 
                 <TextView
                     android:id="@+id/row20_1"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="25dp"
-                    android:onClick="makeReservation"
-                    />
+                    android:layout_weight="1"
+                    android:background="#F2F2F2"
+                    android:onClick="makeReservation"/>
             </TableRow>
 
             <TableRow
-                android:background="@drawable/border2"
+                android:background="#F2F2F2"
                 android:weightSum="1">
 
                 <TextView
                     android:id="@+id/row20_2"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="25dp"
-                    android:onClick="makeReservation"
-                    />
+                    android:layout_weight="1"
+                    android:background="#F2F2F2"
+                    android:onClick="makeReservation"/>
             </TableRow>
 
             <TableRow
-                android:background="@drawable/border2"
+                android:background="#F2F2F2"
                 android:weightSum="1">
 
                 <TextView
                     android:id="@+id/row20_3"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="25dp"
-                    android:onClick="makeReservation"
-                    />
+                    android:layout_weight="1"
+                    android:background="#F2F2F2"
+                    android:onClick="makeReservation"/>
             </TableRow>
 
 
             <TableRow
-                android:background="@drawable/border"
+                android:background="#F2F2F2"
                 android:weightSum="1">
                 <TextView
                     android:id="@+id/row21"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="25dp"
-                    android:onClick="makeReservation"
+                    android:layout_weight="1"
+                    android:background="#F2F2F2"
                     android:gravity="center"
-                    android:textAlignment="center" />
+                    android:onClick="makeReservation" android:textAlignment="center"/>
             </TableRow>
 
             <TableRow
-                android:background="@drawable/border2"
+                android:background="#F2F2F2"
                 android:weightSum="1">
 
                 <TextView
                     android:id="@+id/row21_1"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="25dp"
-                    android:onClick="makeReservation"
-                    />
+                    android:layout_weight="1"
+                    android:background="#F2F2F2"
+                    android:onClick="makeReservation"/>
             </TableRow>
 
             <TableRow
-                android:background="@drawable/border2"
+                android:background="#F2F2F2"
                 android:weightSum="1">
 
                 <TextView
                     android:id="@+id/row21_2"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="25dp"
-                    android:onClick="makeReservation"
-                    />
+                    android:layout_weight="1"
+                    android:background="#F2F2F2"
+                    android:onClick="makeReservation"/>
             </TableRow>
 
             <TableRow
-                android:background="@drawable/border2"
+                android:background="#F2F2F2"
                 android:weightSum="1">
 
                 <TextView
                     android:id="@+id/row21_3"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="25dp"
-                    android:onClick="makeReservation"
-                    />
+                    android:layout_weight="1"
+                    android:background="#F2F2F2"
+                    android:onClick="makeReservation"/>
             </TableRow>
 
             <TableRow
-                android:background="@drawable/border"
+                android:background="#F2F2F2"
                 android:weightSum="1">
                 <TextView
                     android:id="@+id/row22"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="25dp"
-                    android:onClick="makeReservation"
+                    android:layout_weight="1"
+                    android:background="#F2F2F2"
                     android:gravity="center"
-                    android:textAlignment="center" />
+                    android:onClick="makeReservation" android:textAlignment="center"/>
             </TableRow>
 
             <TableRow
-                android:background="@drawable/border2"
+                android:background="#F2F2F2"
                 android:weightSum="1">
 
                 <TextView
                     android:id="@+id/row22_1"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="25dp"
-                    android:onClick="makeReservation"
-                    />
+                    android:layout_weight="1"
+                    android:background="#F2F2F2"
+                    android:onClick="makeReservation"/>
             </TableRow>
 
             <TableRow
-                android:background="@drawable/border2"
+                android:background="#F2F2F2"
                 android:weightSum="1">
 
                 <TextView
                     android:id="@+id/row22_2"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="25dp"
-                    android:onClick="makeReservation"
-                    />
+                    android:layout_weight="1"
+                    android:background="#F2F2F2"
+                    android:onClick="makeReservation"/>
             </TableRow>
 
             <TableRow
-                android:background="@drawable/border2"
+                android:background="#F2F2F2"
                 android:weightSum="1">
 
                 <TextView
                     android:id="@+id/row22_3"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="25dp"
-                    android:onClick="makeReservation"
-                    />
+                    android:layout_weight="1"
+                    android:background="#F2F2F2"
+                    android:onClick="makeReservation"/>
             </TableRow>
 
             <TableRow
-                android:background="@drawable/border"
+                android:background="#F2F2F2"
                 android:weightSum="1">
                 <TextView
                     android:id="@+id/row23"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="25dp"
-                    android:onClick="makeReservation"
+                    android:layout_weight="1"
+                    android:background="#F2F2F2"
                     android:gravity="center"
-                    android:textAlignment="center"/>
+                    android:onClick="makeReservation" android:textAlignment="center"/>
             </TableRow>
 
             <TableRow
-                android:background="@drawable/border2"
+                android:background="#F2F2F2"
                 android:weightSum="1">
 
                 <TextView
                     android:id="@+id/row23_1"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="25dp"
-                    android:onClick="makeReservation"
-                    />
+                    android:layout_weight="1"
+                    android:background="#F2F2F2"
+                    android:onClick="makeReservation"/>
             </TableRow>
 
             <TableRow
-                android:background="@drawable/border2"
+                android:background="#F2F2F2"
                 android:weightSum="1">
 
                 <TextView
                     android:id="@+id/row23_2"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="25dp"
-                    android:onClick="makeReservation"
-                    />
+                    android:layout_weight="1"
+                    android:background="#F2F2F2"
+                    android:onClick="makeReservation"/>
             </TableRow>
 
             <TableRow
-                android:background="@drawable/border2"
+                android:background="#F2F2F2"
                 android:weightSum="1">
 
                 <TextView
                     android:id="@+id/row23_3"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="25dp"
-                    android:onClick="makeReservation"
-                    />
+                    android:layout_weight="1"
+                    android:background="#F2F2F2"
+                    android:onClick="makeReservation"/>
             </TableRow>
         </TableLayout>
     </ScrollView>

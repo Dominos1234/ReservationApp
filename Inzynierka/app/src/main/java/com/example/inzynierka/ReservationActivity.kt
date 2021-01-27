@@ -487,7 +487,7 @@ class ReservationActivity : AppCompatActivity() {
         val txtV = v as TextView
         for(booked in BookedHoursOthers){
             if(v == booked){
-                Toast.makeText(this, "Ta data jest juz zarezerwowana", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, resources.getString(R.string.already_taken), Toast.LENGTH_SHORT).show()
                 return
             }
         }
@@ -655,19 +655,13 @@ class ReservationActivity : AppCompatActivity() {
 
             Log.d("Success", json)
 
-            var notLogged = "Sorry, something went wrong, you were disconnected"
-            var correct = "Successfully deleted a reservation"
-            var entityNotExists = "Error occurred: entity not exists."
-            var missingPermissions = "Account permissions are not sufficient to perform this action."
-            var masterAdminNotAllowed = "Master admin is not allowed for this action. Please login to admin account."
-
             when (Response.code){
                 "notLogged" -> {
                     Logout()
-                    Toast.makeText(this, notLogged, Toast.LENGTH_LONG).show()
+                    Toast.makeText(this, resources.getString(R.string.not_logged), Toast.LENGTH_LONG).show()
                 }
                 "correct" -> {
-                    Toast.makeText(this, correct, Toast.LENGTH_LONG).show()
+                    Toast.makeText(this, resources.getString(R.string.correct), Toast.LENGTH_LONG).show()
                     //go to Reservation
                     val intent = Intent(this, ReservationActivity::class.java)
                     intent.putExtra("day", startTime.dayOfMonth)
@@ -676,9 +670,9 @@ class ReservationActivity : AppCompatActivity() {
                     intent.putExtra("item", item as Serializable)
                     startActivity(intent)
                 }
-                "entityNotExists" -> Toast.makeText(this, entityNotExists, Toast.LENGTH_LONG).show()
-                "missingPermissions" -> Toast.makeText(this, missingPermissions, Toast.LENGTH_LONG).show()
-                "masterAdminNotAllowed" -> Toast.makeText(this, masterAdminNotAllowed, Toast.LENGTH_LONG).show()
+                "entityNotExists" -> Toast.makeText(this, resources.getString(R.string.entity_not_exists), Toast.LENGTH_LONG).show()
+                "missingPermissions" -> Toast.makeText(this, resources.getString(R.string.missing_permissions), Toast.LENGTH_LONG).show()
+                "masterAdminNotAllowed" -> Toast.makeText(this, resources.getString(R.string.master_admin_not_allowed), Toast.LENGTH_LONG).show()
             }
 
         }, failure = { error ->
@@ -717,18 +711,10 @@ class ReservationActivity : AppCompatActivity() {
             var gson = Gson()
             var CategoryJson = gson.fromJson(data, CategoryJson.CategoryInfo::class.java)
 
-
-            var notLogged = "Sorry, something went wrong, you were disconnected"
-            var missingFields = "Technical error occurred: some fields are missing."
-            var invalidData = "Technical error occurred: invalid request data."
-            var entityAlreadyExists = "Entity with given key already exists."
-            var entityNotExists = "Error occurred: entity not exists."
-            var masterAdminNotAllowed = "Master admin is not allowed for this action. Please login to admin account."
-
             when (CategoryJson.code){
                 "notLogged" -> {
                     Logout()
-                    Toast.makeText(this, notLogged, Toast.LENGTH_LONG).show()
+                    Toast.makeText(this, resources.getString(R.string.not_logged), Toast.LENGTH_LONG).show()
                 }
                 "correct" -> {
                     var items = ArrayList<Item>()
@@ -753,11 +739,11 @@ class ReservationActivity : AppCompatActivity() {
                     }
 
                 }
-                "missingFields" -> Toast.makeText(this, missingFields, Toast.LENGTH_LONG).show()
-                "invalidData" -> Toast.makeText(this, invalidData, Toast.LENGTH_LONG).show()
-                "entityAlreadyExists" -> Toast.makeText(this, entityAlreadyExists, Toast.LENGTH_LONG).show()
-                "entityNotExists" -> Toast.makeText(this, entityNotExists, Toast.LENGTH_LONG).show()
-                "masterAdminNotAllowed" -> Toast.makeText(this, masterAdminNotAllowed, Toast.LENGTH_LONG).show()
+                "missingFields" -> Toast.makeText(this, resources.getString(R.string.missing_fields), Toast.LENGTH_LONG).show()
+                "invalidData" -> Toast.makeText(this, resources.getString(R.string.invalid_data), Toast.LENGTH_LONG).show()
+                "entityAlreadyExists" -> Toast.makeText(this, resources.getString(R.string.entity_already_exists), Toast.LENGTH_LONG).show()
+                "entityNotExists" -> Toast.makeText(this, resources.getString(R.string.entity_not_exists), Toast.LENGTH_LONG).show()
+                "masterAdminNotAllowed" -> Toast.makeText(this, resources.getString(R.string.master_admin_not_allowed), Toast.LENGTH_LONG).show()
 
             }
 
