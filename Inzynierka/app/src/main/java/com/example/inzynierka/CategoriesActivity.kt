@@ -41,6 +41,7 @@ class CategoriesActivity : AppCompatActivity() {
 
         val (_, _, result) = Fuel.get("http://51.178.82.249:2067/api/user/category")
             .header("session-id", sessionId)
+            .header("Connection", "close")
             .responseString()
 
         val (data, _) = result
