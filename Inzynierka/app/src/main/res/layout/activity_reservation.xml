@@ -4,23 +4,23 @@
                                                    xmlns:tools="http://schemas_android_com/tools"
                                                    android:layout_width="match_parent"
                                                    android:layout_height="match_parent"
-                                                   android:background="#F2F2F2" tools:context="_ReservationActivity">
+                                                   android:background="@drawable/border2" tools:context="_ReservationActivity">
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        android:background="#F2F2F2"
+        android:background="@drawable/border2"
         android:scrollbars="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent">
         <TableLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="#F2F2F2">
+            android:background="@drawable/border2">
 
             <TableRow
-                android:background="#F2F2F2"
+                android:background="@drawable/border2"
                 android:weightSum="1">
 
                 <TextView
@@ -28,14 +28,14 @@
                     android:layout_width="0dp"
                     android:layout_height="25dp"
                     android:layout_weight="1"
-                    android:background="#F2F2F2"
+                    android:background="@drawable/border"
                     android:gravity="center"
                     android:onClick="makeReservation"
                     android:textAlignment="center"/>
             </TableRow>
 
             <TableRow
-                android:background="#F2F2F2"
+                android:background="@drawable/border2"
                 android:weightSum="1">
 
                 <TextView
@@ -43,12 +43,12 @@
                     android:layout_width="0dp"
                     android:layout_height="25dp"
                     android:layout_weight="1"
-                    android:background="#F2F2F2"
+                    android:background="@drawable/border2"
                     android:onClick="makeReservation"/>
             </TableRow>
 
             <TableRow
-                android:background="#F2F2F2"
+                android:background="@drawable/border2"
                 android:weightSum="1">
 
                 <TextView
@@ -56,12 +56,12 @@
                     android:layout_width="0dp"
                     android:layout_height="25dp"
                     android:layout_weight="1"
-                    android:background="#F2F2F2"
+                    android:background="@drawable/border2"
                     android:onClick="makeReservation"/>
             </TableRow>
 
             <TableRow
-                android:background="#F2F2F2"
+                android:background="@drawable/border2"
                 android:weightSum="1">
 
                 <TextView
@@ -69,12 +69,12 @@
                     android:layout_width="0dp"
                     android:layout_height="25dp"
                     android:layout_weight="1"
-                    android:background="#F2F2F2"
+                    android:background="@drawable/border2"
                     android:onClick="makeReservation"/>
             </TableRow>
 
             <TableRow
-                android:background="#F2F2F2"
+                android:background="@drawable/border2"
                 android:weightSum="1">
 
                 <TextView
@@ -82,13 +82,13 @@
                     android:layout_width="0dp"
                     android:layout_height="25dp"
                     android:layout_weight="1"
-                    android:background="#F2F2F2"
+                    android:background="@drawable/border"
                     android:gravity="center"
                     android:onClick="makeReservation" android:textAlignment="center"/>
             </TableRow>
 
             <TableRow
-                android:background="#F2F2F2"
+                android:background="@drawable/border2"
                 android:weightSum="1">
 
                 <TextView
@@ -96,12 +96,12 @@
                     android:layout_width="0dp"
                     android:layout_height="25dp"
                     android:layout_weight="1"
-                    android:background="#F2F2F2"
+                    android:background="@drawable/border2"
                     android:onClick="makeReservation"/>
             </TableRow>
 
             <TableRow
-                android:background="#F2F2F2"
+                android:background="@drawable/border2"
                 android:weightSum="1">
 
                 <TextView
@@ -109,12 +109,12 @@
                     android:layout_width="0dp"
                     android:layout_height="25dp"
                     android:layout_weight="1"
-                    android:background="#F2F2F2"
+                    android:background="@drawable/border2"
                     android:onClick="makeReservation"/>
             </TableRow>
 
             <TableRow
-                android:background="#F2F2F2"
+                android:background="@drawable/border2"
                 android:weightSum="1">
 
                 <TextView
@@ -122,25 +122,25 @@
                     android:layout_width="0dp"
                     android:layout_height="25dp"
                     android:layout_weight="1"
-                    android:background="#F2F2F2"
+                    android:background="@drawable/border2"
                     android:onClick="makeReservation"/>
             </TableRow>
 
             <TableRow
-                android:background="#F2F2F2"
+                android:background="@drawable/border2"
                 android:weightSum="1">
                 <TextView
                     android:id="@+id/row2"
                     android:layout_width="0dp"
                     android:layout_height="25dp"
                     android:layout_weight="1"
-                    android:background="#F2F2F2"
+                    android:background="@drawable/border"
                     android:gravity="center"
                     android:onClick="makeReservation" android:textAlignment="center"/>
             </TableRow>
 
             <TableRow
-                android:background="#F2F2F2"
+                android:background="@drawable/border2"
                 android:weightSum="1">
 
                 <TextView
@@ -148,12 +148,12 @@
                     android:layout_width="0dp"
                     android:layout_height="25dp"
                     android:layout_weight="1"
-                    android:background="#F2F2F2"
+                    android:background="@drawable/border2"
                     android:onClick="makeReservation"/>
             </TableRow>
 
             <TableRow
-                android:background="#F2F2F2"
+                android:background="@drawable/border2"
                 android:weightSum="1">
 
                 <TextView
@@ -161,12 +161,12 @@
                     android:layout_width="0dp"
                     android:layout_height="25dp"
                     android:layout_weight="1"
-                    android:background="#F2F2F2"
+                    android:background="@drawable/border2"
                     android:onClick="makeReservation"/>
             </TableRow>
 
             <TableRow
-                android:background="#F2F2F2"
+                android:background="@drawable/border2"
                 android:weightSum="1">
 
                 <TextView
@@ -174,25 +174,25 @@
                     android:layout_width="0dp"
                     android:layout_height="25dp"
                     android:layout_weight="1"
-                    android:background="#F2F2F2"
+                    android:background="@drawable/border2"
                     android:onClick="makeReservation"/>
             </TableRow>
 
             <TableRow
-                android:background="#F2F2F2"
+                android:background="@drawable/border2"
                 android:weightSum="1">
                 <TextView
                     android:id="@+id/row3"
                     android:layout_width="0dp"
                     android:layout_height="25dp"
                     android:layout_weight="1"
-                    android:background="#F2F2F2"
+                    android:background="@drawable/border"
                     android:gravity="center"
                     android:onClick="makeReservation" android:textAlignment="center"/>
             </TableRow>
 
             <TableRow
-                android:background="#F2F2F2"
+                android:background="@drawable/border2"
                 android:weightSum="1">
 
                 <TextView
@@ -200,12 +200,12 @@
                     android:layout_width="0dp"
                     android:layout_height="25dp"
                     android:layout_weight="1"
-                    android:background="#F2F2F2"
+                    android:background="@drawable/border2"
                     android:onClick="makeReservation"/>
             </TableRow>
 
             <TableRow
-                android:background="#F2F2F2"
+                android:background="@drawable/border2"
                 android:weightSum="1">
 
                 <TextView
@@ -213,12 +213,12 @@
                     android:layout_width="0dp"
                     android:layout_height="25dp"
                     android:layout_weight="1"
-                    android:background="#F2F2F2"
+                    android:background="@drawable/border2"
                     android:onClick="makeReservation"/>
             </TableRow>
 
             <TableRow
-                android:background="#F2F2F2"
+                android:background="@drawable/border2"
                 android:weightSum="1">
 
                 <TextView
@@ -226,25 +226,25 @@
                     android:layout_width="0dp"
                     android:layout_height="25dp"
                     android:layout_weight="1"
-                    android:background="#F2F2F2"
+                    android:background="@drawable/border2"
                     android:onClick="makeReservation"/>
             </TableRow>
 
             <TableRow
-                android:background="#F2F2F2"
+                android:background="@drawable/border2"
                 android:weightSum="1">
                 <TextView
                     android:id="@+id/row4"
                     android:layout_width="0dp"
                     android:layout_height="25dp"
                     android:layout_weight="1"
-                    android:background="#F2F2F2"
+                    android:background="@drawable/border"
                     android:gravity="center"
                     android:onClick="makeReservation" android:textAlignment="center"/>
             </TableRow>
 
             <TableRow
-                android:background="#F2F2F2"
+                android:background="@drawable/border2"
                 android:weightSum="1">
 
                 <TextView
@@ -252,12 +252,12 @@
                     android:layout_width="0dp"
                     android:layout_height="25dp"
                     android:layout_weight="1"
-                    android:background="#F2F2F2"
+                    android:background="@drawable/border2"
                     android:onClick="makeReservation"/>
             </TableRow>
 
             <TableRow
-                android:background="#F2F2F2"
+                android:background="@drawable/border2"
                 android:weightSum="1">
 
                 <TextView
@@ -265,12 +265,12 @@
                     android:layout_width="0dp"
                     android:layout_height="25dp"
                     android:layout_weight="1"
-                    android:background="#F2F2F2"
+                    android:background="@drawable/border2"
                     android:onClick="makeReservation"/>
             </TableRow>
 
             <TableRow
-                android:background="#F2F2F2"
+                android:background="@drawable/border2"
                 android:weightSum="1">
 
                 <TextView
@@ -278,25 +278,25 @@
                     android:layout_width="0dp"
                     android:layout_height="25dp"
                     android:layout_weight="1"
-                    android:background="#F2F2F2"
+                    android:background="@drawable/border2"
                     android:onClick="makeReservation"/>
             </TableRow>
 
             <TableRow
-                android:background="#F2F2F2"
+                android:background="@drawable/border2"
                 android:weightSum="1">
                 <TextView
                     android:id="@+id/row5"
                     android:layout_width="0dp"
                     android:layout_height="25dp"
                     android:layout_weight="1"
-                    android:background="#F2F2F2"
+                    android:background="@drawable/border"
                     android:gravity="center"
                     android:onClick="makeReservation" android:textAlignment="center"/>
             </TableRow>
 
             <TableRow
-                android:background="#F2F2F2"
+                android:background="@drawable/border2"
                 android:weightSum="1">
 
                 <TextView
@@ -304,12 +304,12 @@
                     android:layout_width="0dp"
                     android:layout_height="25dp"
                     android:layout_weight="1"
-                    android:background="#F2F2F2"
+                    android:background="@drawable/border2"
                     android:onClick="makeReservation"/>
             </TableRow>
 
             <TableRow
-                android:background="#F2F2F2"
+                android:background="@drawable/border2"
                 android:weightSum="1">
 
                 <TextView
@@ -317,12 +317,12 @@
                     android:layout_width="0dp"
                     android:layout_height="25dp"
                     android:layout_weight="1"
-                    android:background="#F2F2F2"
+                    android:background="@drawable/border2"
                     android:onClick="makeReservation"/>
             </TableRow>
 
             <TableRow
-                android:background="#F2F2F2"
+                android:background="@drawable/border2"
                 android:weightSum="1">
 
                 <TextView
@@ -330,25 +330,25 @@
                     android:layout_width="0dp"
                     android:layout_height="25dp"
                     android:layout_weight="1"
-                    android:background="#F2F2F2"
+                    android:background="@drawable/border2"
                     android:onClick="makeReservation"/>
             </TableRow>
 
             <TableRow
-                android:background="#F2F2F2"
+                android:background="@drawable/border2"
                 android:weightSum="1">
                 <TextView
                     android:id="@+id/row6"
                     android:layout_width="0dp"
                     android:layout_height="25dp"
                     android:layout_weight="1"
-                    android:background="#F2F2F2"
+                    android:background="@drawable/border"
                     android:gravity="center"
                     android:onClick="makeReservation" android:textAlignment="center"/>
             </TableRow>
 
             <TableRow
-                android:background="#F2F2F2"
+                android:background="@drawable/border2"
                 android:weightSum="1">
 
                 <TextView
@@ -356,12 +356,12 @@
                     android:layout_width="0dp"
                     android:layout_height="25dp"
                     android:layout_weight="1"
-                    android:background="#F2F2F2"
+                    android:background="@drawable/border2"
                     android:onClick="makeReservation"/>
             </TableRow>
 
             <TableRow
-                android:background="#F2F2F2"
+                android:background="@drawable/border2"
                 android:weightSum="1">
 
                 <TextView
@@ -369,12 +369,12 @@
                     android:layout_width="0dp"
                     android:layout_height="25dp"
                     android:layout_weight="1"
-                    android:background="#F2F2F2"
+                    android:background="@drawable/border2"
                     android:onClick="makeReservation"/>
             </TableRow>
 
             <TableRow
-                android:background="#F2F2F2"
+                android:background="@drawable/border2"
                 android:weightSum="1">
 
                 <TextView
@@ -382,25 +382,25 @@
                     android:layout_width="0dp"
                     android:layout_height="25dp"
                     android:layout_weight="1"
-                    android:background="#F2F2F2"
+                    android:background="@drawable/border2"
                     android:onClick="makeReservation"/>
             </TableRow>
 
             <TableRow
-                android:background="#F2F2F2"
+                android:background="@drawable/border2"
                 android:weightSum="1">
                 <TextView
                     android:id="@+id/row7"
                     android:layout_width="0dp"
                     android:layout_height="25dp"
                     android:layout_weight="1"
-                    android:background="#F2F2F2"
+                    android:background="@drawable/border"
                     android:gravity="center"
                     android:onClick="makeReservation" android:textAlignment="center"/>
             </TableRow>
 
             <TableRow
-                android:background="#F2F2F2"
+                android:background="@drawable/border2"
                 android:weightSum="1">
 
                 <TextView
@@ -408,12 +408,12 @@
                     android:layout_width="0dp"
                     android:layout_height="25dp"
                     android:layout_weight="1"
-                    android:background="#F2F2F2"
+                    android:background="@drawable/border2"
                     android:onClick="makeReservation"/>
             </TableRow>
 
             <TableRow
-                android:background="#F2F2F2"
+                android:background="@drawable/border2"
                 android:weightSum="1">
 
                 <TextView
@@ -421,12 +421,12 @@
                     android:layout_width="0dp"
                     android:layout_height="25dp"
                     android:layout_weight="1"
-                    android:background="#F2F2F2"
+                    android:background="@drawable/border2"
                     android:onClick="makeReservation"/>
             </TableRow>
 
             <TableRow
-                android:background="#F2F2F2"
+                android:background="@drawable/border2"
                 android:weightSum="1">
 
                 <TextView
@@ -434,25 +434,25 @@
                     android:layout_width="0dp"
                     android:layout_height="25dp"
                     android:layout_weight="1"
-                    android:background="#F2F2F2"
+                    android:background="@drawable/border2"
                     android:onClick="makeReservation"/>
             </TableRow>
 
             <TableRow
-                android:background="#F2F2F2"
+                android:background="@drawable/border2"
                 android:weightSum="1">
                 <TextView
                     android:id="@+id/row8"
                     android:layout_width="0dp"
                     android:layout_height="25dp"
                     android:layout_weight="1"
-                    android:background="#F2F2F2"
+                    android:background="@drawable/border"
                     android:gravity="center"
                     android:onClick="makeReservation" android:textAlignment="center"/>
             </TableRow>
 
             <TableRow
-                android:background="#F2F2F2"
+                android:background="@drawable/border2"
                 android:weightSum="1">
 
                 <TextView
@@ -460,12 +460,12 @@
                     android:layout_width="0dp"
                     android:layout_height="25dp"
                     android:layout_weight="1"
-                    android:background="#F2F2F2"
+                    android:background="@drawable/border2"
                     android:onClick="makeReservation"/>
             </TableRow>
 
             <TableRow
-                android:background="#F2F2F2"
+                android:background="@drawable/border2"
                 android:weightSum="1">
 
                 <TextView
@@ -473,12 +473,12 @@
                     android:layout_width="0dp"
                     android:layout_height="25dp"
                     android:layout_weight="1"
-                    android:background="#F2F2F2"
+                    android:background="@drawable/border2"
                     android:onClick="makeReservation"/>
             </TableRow>
 
             <TableRow
-                android:background="#F2F2F2"
+                android:background="@drawable/border2"
                 android:weightSum="1">
 
                 <TextView
@@ -486,25 +486,25 @@
                     android:layout_width="0dp"
                     android:layout_height="25dp"
                     android:layout_weight="1"
-                    android:background="#F2F2F2"
+                    android:background="@drawable/border2"
                     android:onClick="makeReservation"/>
             </TableRow>
 
             <TableRow
-                android:background="#F2F2F2"
+                android:background="@drawable/border2"
                 android:weightSum="1">
                 <TextView
                     android:id="@+id/row9"
                     android:layout_width="0dp"
                     android:layout_height="25dp"
                     android:layout_weight="1"
-                    android:background="#F2F2F2"
+                    android:background="@drawable/border"
                     android:gravity="center"
                     android:onClick="makeReservation" android:textAlignment="center"/>
             </TableRow>
 
             <TableRow
-                android:background="#F2F2F2"
+                android:background="@drawable/border2"
                 android:weightSum="1">
 
                 <TextView
@@ -512,12 +512,12 @@
                     android:layout_width="0dp"
                     android:layout_height="25dp"
                     android:layout_weight="1"
-                    android:background="#F2F2F2"
+                    android:background="@drawable/border2"
                     android:onClick="makeReservation"/>
             </TableRow>
 
             <TableRow
-                android:background="#F2F2F2"
+                android:background="@drawable/border2"
                 android:weightSum="1">
 
                 <TextView
@@ -525,12 +525,12 @@
                     android:layout_width="0dp"
                     android:layout_height="25dp"
                     android:layout_weight="1"
-                    android:background="#F2F2F2"
+                    android:background="@drawable/border2"
                     android:onClick="makeReservation"/>
             </TableRow>
 
             <TableRow
-                android:background="#F2F2F2"
+                android:background="@drawable/border2"
                 android:weightSum="1">
 
                 <TextView
@@ -538,26 +538,26 @@
                     android:layout_width="0dp"
                     android:layout_height="25dp"
                     android:layout_weight="1"
-                    android:background="#F2F2F2"
+                    android:background="@drawable/border2"
                     android:onClick="makeReservation"/>
 
             </TableRow>
 
             <TableRow
-                android:background="#F2F2F2"
+                android:background="@drawable/border2"
                 android:weightSum="1">
                 <TextView
                     android:id="@+id/row10"
                     android:layout_width="0dp"
                     android:layout_height="25dp"
                     android:layout_weight="1"
-                    android:background="#F2F2F2"
+                    android:background="@drawable/border"
                     android:gravity="center"
                     android:onClick="makeReservation" android:textAlignment="center"/>
             </TableRow>
 
             <TableRow
-                android:background="#F2F2F2"
+                android:background="@drawable/border2"
                 android:weightSum="1">
 
                 <TextView
@@ -565,12 +565,12 @@
                     android:layout_width="0dp"
                     android:layout_height="25dp"
                     android:layout_weight="1"
-                    android:background="#F2F2F2"
+                    android:background="@drawable/border2"
                     android:onClick="makeReservation"/>
             </TableRow>
 
             <TableRow
-                android:background="#F2F2F2"
+                android:background="@drawable/border2"
                 android:weightSum="1">
 
                 <TextView
@@ -578,12 +578,12 @@
                     android:layout_width="0dp"
                     android:layout_height="25dp"
                     android:layout_weight="1"
-                    android:background="#F2F2F2"
+                    android:background="@drawable/border2"
                     android:onClick="makeReservation"/>
             </TableRow>
 
             <TableRow
-                android:background="#F2F2F2"
+                android:background="@drawable/border2"
                 android:weightSum="1">
 
                 <TextView
@@ -591,25 +591,25 @@
                     android:layout_width="0dp"
                     android:layout_height="25dp"
                     android:layout_weight="1"
-                    android:background="#F2F2F2"
+                    android:background="@drawable/border2"
                     android:onClick="makeReservation"/>
             </TableRow>
 
             <TableRow
-                android:background="#F2F2F2"
+                android:background="@drawable/border2"
                 android:weightSum="1">
                 <TextView
                     android:id="@+id/row11"
                     android:layout_width="0dp"
                     android:layout_height="25dp"
                     android:layout_weight="1"
-                    android:background="#F2F2F2"
+                    android:background="@drawable/border"
                     android:gravity="center"
                     android:onClick="makeReservation" android:textAlignment="center"/>
             </TableRow>
 
             <TableRow
-                android:background="#F2F2F2"
+                android:background="@drawable/border2"
                 android:weightSum="1">
 
                 <TextView
@@ -617,12 +617,12 @@
                     android:layout_width="0dp"
                     android:layout_height="25dp"
                     android:layout_weight="1"
-                    android:background="#F2F2F2"
+                    android:background="@drawable/border2"
                     android:onClick="makeReservation"/>
             </TableRow>
 
             <TableRow
-                android:background="#F2F2F2"
+                android:background="@drawable/border2"
                 android:weightSum="1">
 
                 <TextView
@@ -630,12 +630,12 @@
                     android:layout_width="0dp"
                     android:layout_height="25dp"
                     android:layout_weight="1"
-                    android:background="#F2F2F2"
+                    android:background="@drawable/border2"
                     android:onClick="makeReservation"/>
             </TableRow>
 
             <TableRow
-                android:background="#F2F2F2"
+                android:background="@drawable/border2"
                 android:weightSum="1">
 
                 <TextView
@@ -643,25 +643,25 @@
                     android:layout_width="0dp"
                     android:layout_height="25dp"
                     android:layout_weight="1"
-                    android:background="#F2F2F2"
+                    android:background="@drawable/border2"
                     android:onClick="makeReservation"/>
             </TableRow>
 
             <TableRow
-                android:background="#F2F2F2"
+                android:background="@drawable/border2"
                 android:weightSum="1">
                 <TextView
                     android:id="@+id/row12"
                     android:layout_width="0dp"
                     android:layout_height="25dp"
                     android:layout_weight="1"
-                    android:background="#F2F2F2"
+                    android:background="@drawable/border"
                     android:gravity="center"
                     android:onClick="makeReservation" android:textAlignment="center"/>
             </TableRow>
 
             <TableRow
-                android:background="#F2F2F2"
+                android:background="@drawable/border2"
                 android:weightSum="1">
 
                 <TextView
@@ -669,12 +669,12 @@
                     android:layout_width="0dp"
                     android:layout_height="25dp"
                     android:layout_weight="1"
-                    android:background="#F2F2F2"
+                    android:background="@drawable/border2"
                     android:onClick="makeReservation"/>
             </TableRow>
 
             <TableRow
-                android:background="#F2F2F2"
+                android:background="@drawable/border2"
                 android:weightSum="1">
 
                 <TextView
@@ -682,12 +682,12 @@
                     android:layout_width="0dp"
                     android:layout_height="25dp"
                     android:layout_weight="1"
-                    android:background="#F2F2F2"
+                    android:background="@drawable/border2"
                     android:onClick="makeReservation"/>
             </TableRow>
 
             <TableRow
-                android:background="#F2F2F2"
+                android:background="@drawable/border2"
                 android:weightSum="1">
 
                 <TextView
@@ -695,25 +695,25 @@
                     android:layout_width="0dp"
                     android:layout_height="25dp"
                     android:layout_weight="1"
-                    android:background="#F2F2F2"
+                    android:background="@drawable/border2"
                     android:onClick="makeReservation"/>
             </TableRow>
 
             <TableRow
-                android:background="#F2F2F2"
+                android:background="@drawable/border2"
                 android:weightSum="1">
                 <TextView
                     android:id="@+id/row13"
                     android:layout_width="0dp"
                     android:layout_height="25dp"
                     android:layout_weight="1"
-                    android:background="#F2F2F2"
+                    android:background="@drawable/border"
                     android:gravity="center"
                     android:onClick="makeReservation" android:textAlignment="center"/>
             </TableRow>
 
             <TableRow
-                android:background="#F2F2F2"
+                android:background="@drawable/border2"
                 android:weightSum="1">
 
                 <TextView
@@ -721,12 +721,12 @@
                     android:layout_width="0dp"
                     android:layout_height="25dp"
                     android:layout_weight="1"
-                    android:background="#F2F2F2"
+                    android:background="@drawable/border2"
                     android:onClick="makeReservation"/>
             </TableRow>
 
             <TableRow
-                android:background="#F2F2F2"
+                android:background="@drawable/border2"
                 android:weightSum="1">
 
                 <TextView
@@ -734,12 +734,12 @@
                     android:layout_width="0dp"
                     android:layout_height="25dp"
                     android:layout_weight="1"
-                    android:background="#F2F2F2"
+                    android:background="@drawable/border2"
                     android:onClick="makeReservation"/>
             </TableRow>
 
             <TableRow
-                android:background="#F2F2F2"
+                android:background="@drawable/border2"
                 android:weightSum="1">
 
                 <TextView
@@ -747,25 +747,25 @@
                     android:layout_width="0dp"
                     android:layout_height="25dp"
                     android:layout_weight="1"
-                    android:background="#F2F2F2"
+                    android:background="@drawable/border2"
                     android:onClick="makeReservation"/>
             </TableRow>
 
             <TableRow
-                android:background="#F2F2F2"
+                android:background="@drawable/border2"
                 android:weightSum="1">
                 <TextView
                     android:id="@+id/row14"
                     android:layout_width="0dp"
                     android:layout_height="25dp"
                     android:layout_weight="1"
-                    android:background="#F2F2F2"
+                    android:background="@drawable/border"
                     android:gravity="center"
                     android:onClick="makeReservation" android:textAlignment="center"/>
             </TableRow>
 
             <TableRow
-                android:background="#F2F2F2"
+                android:background="@drawable/border2"
                 android:weightSum="1">
 
                 <TextView
@@ -773,12 +773,12 @@
                     android:layout_width="0dp"
                     android:layout_height="25dp"
                     android:layout_weight="1"
-                    android:background="#F2F2F2"
+                    android:background="@drawable/border2"
                     android:onClick="makeReservation"/>
             </TableRow>
 
             <TableRow
-                android:background="#F2F2F2"
+                android:background="@drawable/border2"
                 android:weightSum="1">
 
                 <TextView
@@ -786,12 +786,12 @@
                     android:layout_width="0dp"
                     android:layout_height="25dp"
                     android:layout_weight="1"
-                    android:background="#F2F2F2"
+                    android:background="@drawable/border2"
                     android:onClick="makeReservation"/>
             </TableRow>
 
             <TableRow
-                android:background="#F2F2F2"
+                android:background="@drawable/border2"
                 android:weightSum="1">
 
                 <TextView
@@ -799,25 +799,25 @@
                     android:layout_width="0dp"
                     android:layout_height="25dp"
                     android:layout_weight="1"
-                    android:background="#F2F2F2"
+                    android:background="@drawable/border2"
                     android:onClick="makeReservation"/>
             </TableRow>
 
             <TableRow
-                android:background="#F2F2F2"
+                android:background="@drawable/border2"
                 android:weightSum="1">
                 <TextView
                     android:id="@+id/row15"
                     android:layout_width="0dp"
                     android:layout_height="25dp"
                     android:layout_weight="1"
-                    android:background="#F2F2F2"
+                    android:background="@drawable/border"
                     android:gravity="center"
                     android:onClick="makeReservation" android:textAlignment="center"/>
             </TableRow>
 
             <TableRow
-                android:background="#F2F2F2"
+                android:background="@drawable/border2"
                 android:weightSum="1">
 
                 <TextView
@@ -825,12 +825,12 @@
                     android:layout_width="0dp"
                     android:layout_height="25dp"
                     android:layout_weight="1"
-                    android:background="#F2F2F2"
+                    android:background="@drawable/border2"
                     android:onClick="makeReservation"/>
             </TableRow>
 
             <TableRow
-                android:background="#F2F2F2"
+                android:background="@drawable/border2"
                 android:weightSum="1">
 
                 <TextView
@@ -838,12 +838,12 @@
                     android:layout_width="0dp"
                     android:layout_height="25dp"
                     android:layout_weight="1"
-                    android:background="#F2F2F2"
+                    android:background="@drawable/border2"
                     android:onClick="makeReservation"/>
             </TableRow>
 
             <TableRow
-                android:background="#F2F2F2"
+                android:background="@drawable/border2"
                 android:weightSum="1">
 
                 <TextView
@@ -851,25 +851,25 @@
                     android:layout_width="0dp"
                     android:layout_height="25dp"
                     android:layout_weight="1"
-                    android:background="#F2F2F2"
+                    android:background="@drawable/border2"
                     android:onClick="makeReservation"/>
             </TableRow>
 
             <TableRow
-                android:background="#F2F2F2"
+                android:background="@drawable/border2"
                 android:weightSum="1">
                 <TextView
                     android:id="@+id/row16"
                     android:layout_width="0dp"
                     android:layout_height="25dp"
                     android:layout_weight="1"
-                    android:background="#F2F2F2"
+                    android:background="@drawable/border"
                     android:gravity="center"
                     android:onClick="makeReservation" android:textAlignment="center"/>
             </TableRow>
 
             <TableRow
-                android:background="#F2F2F2"
+                android:background="@drawable/border2"
                 android:weightSum="1">
 
                 <TextView
@@ -877,12 +877,12 @@
                     android:layout_width="0dp"
                     android:layout_height="25dp"
                     android:layout_weight="1"
-                    android:background="#F2F2F2"
+                    android:background="@drawable/border2"
                     android:onClick="makeReservation"/>
             </TableRow>
 
             <TableRow
-                android:background="#F2F2F2"
+                android:background="@drawable/border2"
                 android:weightSum="1">
 
                 <TextView
@@ -890,12 +890,12 @@
                     android:layout_width="0dp"
                     android:layout_height="25dp"
                     android:layout_weight="1"
-                    android:background="#F2F2F2"
+                    android:background="@drawable/border2"
                     android:onClick="makeReservation"/>
             </TableRow>
 
             <TableRow
-                android:background="#F2F2F2"
+                android:background="@drawable/border2"
                 android:weightSum="1">
 
                 <TextView
@@ -903,25 +903,25 @@
                     android:layout_width="0dp"
                     android:layout_height="25dp"
                     android:layout_weight="1"
-                    android:background="#F2F2F2"
+                    android:background="@drawable/border2"
                     android:onClick="makeReservation"/>
             </TableRow>
 
             <TableRow
-                android:background="#F2F2F2"
+                android:background="@drawable/border2"
                 android:weightSum="1">
                 <TextView
                     android:id="@+id/row17"
                     android:layout_width="0dp"
                     android:layout_height="25dp"
                     android:layout_weight="1"
-                    android:background="#F2F2F2"
+                    android:background="@drawable/border"
                     android:gravity="center"
                     android:onClick="makeReservation" android:textAlignment="center"/>
             </TableRow>
 
             <TableRow
-                android:background="#F2F2F2"
+                android:background="@drawable/border2"
                 android:weightSum="1">
 
                 <TextView
@@ -929,12 +929,12 @@
                     android:layout_width="0dp"
                     android:layout_height="25dp"
                     android:layout_weight="1"
-                    android:background="#F2F2F2"
+                    android:background="@drawable/border2"
                     android:onClick="makeReservation"/>
             </TableRow>
 
             <TableRow
-                android:background="#F2F2F2"
+                android:background="@drawable/border2"
                 android:weightSum="1">
 
                 <TextView
@@ -942,12 +942,12 @@
                     android:layout_width="0dp"
                     android:layout_height="25dp"
                     android:layout_weight="1"
-                    android:background="#F2F2F2"
+                    android:background="@drawable/border2"
                     android:onClick="makeReservation"/>
             </TableRow>
 
             <TableRow
-                android:background="#F2F2F2"
+                android:background="@drawable/border2"
                 android:weightSum="1">
 
                 <TextView
@@ -955,25 +955,25 @@
                     android:layout_width="0dp"
                     android:layout_height="25dp"
                     android:layout_weight="1"
-                    android:background="#F2F2F2"
+                    android:background="@drawable/border2"
                     android:onClick="makeReservation"/>
             </TableRow>
 
             <TableRow
-                android:background="#F2F2F2"
+                android:background="@drawable/border2"
                 android:weightSum="1">
                 <TextView
                     android:id="@+id/row18"
                     android:layout_width="0dp"
                     android:layout_height="25dp"
                     android:layout_weight="1"
-                    android:background="#F2F2F2"
+                    android:background="@drawable/border"
                     android:gravity="center"
                     android:onClick="makeReservation" android:textAlignment="center"/>
             </TableRow>
 
             <TableRow
-                android:background="#F2F2F2"
+                android:background="@drawable/border2"
                 android:weightSum="1">
 
                 <TextView
@@ -981,12 +981,12 @@
                     android:layout_width="0dp"
                     android:layout_height="25dp"
                     android:layout_weight="1"
-                    android:background="#F2F2F2"
+                    android:background="@drawable/border2"
                     android:onClick="makeReservation"/>
             </TableRow>
 
             <TableRow
-                android:background="#F2F2F2"
+                android:background="@drawable/border2"
                 android:weightSum="1">
 
                 <TextView
@@ -994,12 +994,12 @@
                     android:layout_width="0dp"
                     android:layout_height="25dp"
                     android:layout_weight="1"
-                    android:background="#F2F2F2"
+                    android:background="@drawable/border2"
                     android:onClick="makeReservation"/>
             </TableRow>
 
             <TableRow
-                android:background="#F2F2F2"
+                android:background="@drawable/border2"
                 android:weightSum="1">
 
                 <TextView
@@ -1007,25 +1007,25 @@
                     android:layout_width="0dp"
                     android:layout_height="25dp"
                     android:layout_weight="1"
-                    android:background="#F2F2F2"
+                    android:background="@drawable/border2"
                     android:onClick="makeReservation"/>
             </TableRow>
 
             <TableRow
-                android:background="#F2F2F2"
+                android:background="@drawable/border2"
                 android:weightSum="1">
                 <TextView
                     android:id="@+id/row19"
                     android:layout_width="0dp"
                     android:layout_height="25dp"
                     android:layout_weight="1"
-                    android:background="#F2F2F2"
+                    android:background="@drawable/border"
                     android:gravity="center"
                     android:onClick="makeReservation" android:textAlignment="center"/>
             </TableRow>
 
             <TableRow
-                android:background="#F2F2F2"
+                android:background="@drawable/border2"
                 android:weightSum="1">
 
                 <TextView
@@ -1033,12 +1033,12 @@
                     android:layout_width="0dp"
                     android:layout_height="25dp"
                     android:layout_weight="1"
-                    android:background="#F2F2F2"
+                    android:background="@drawable/border2"
                     android:onClick="makeReservation"/>
             </TableRow>
 
             <TableRow
-                android:background="#F2F2F2"
+                android:background="@drawable/border2"
                 android:weightSum="1">
 
                 <TextView
@@ -1046,12 +1046,12 @@
                     android:layout_width="0dp"
                     android:layout_height="25dp"
                     android:layout_weight="1"
-                    android:background="#F2F2F2"
+                    android:background="@drawable/border2"
                     android:onClick="makeReservation"/>
             </TableRow>
 
             <TableRow
-                android:background="#F2F2F2"
+                android:background="@drawable/border2"
                 android:weightSum="1">
 
                 <TextView
@@ -1059,25 +1059,25 @@
                     android:layout_width="0dp"
                     android:layout_height="25dp"
                     android:layout_weight="1"
-                    android:background="#F2F2F2"
+                    android:background="@drawable/border2"
                     android:onClick="makeReservation"/>
             </TableRow>
 
             <TableRow
-                android:background="#F2F2F2"
+                android:background="@drawable/border2"
                 android:weightSum="1">
                 <TextView
                     android:id="@+id/row20"
                     android:layout_width="0dp"
                     android:layout_height="25dp"
                     android:layout_weight="1"
-                    android:background="#F2F2F2"
+                    android:background="@drawable/border"
                     android:gravity="center"
                     android:onClick="makeReservation" android:textAlignment="center"/>
             </TableRow>
 
             <TableRow
-                android:background="#F2F2F2"
+                android:background="@drawable/border2"
                 android:weightSum="1">
 
                 <TextView
@@ -1085,12 +1085,12 @@
                     android:layout_width="0dp"
                     android:layout_height="25dp"
                     android:layout_weight="1"
-                    android:background="#F2F2F2"
+                    android:background="@drawable/border2"
                     android:onClick="makeReservation"/>
             </TableRow>
 
             <TableRow
-                android:background="#F2F2F2"
+                android:background="@drawable/border2"
                 android:weightSum="1">
 
                 <TextView
@@ -1098,12 +1098,12 @@
                     android:layout_width="0dp"
                     android:layout_height="25dp"
                     android:layout_weight="1"
-                    android:background="#F2F2F2"
+                    android:background="@drawable/border2"
                     android:onClick="makeReservation"/>
             </TableRow>
 
             <TableRow
-                android:background="#F2F2F2"
+                android:background="@drawable/border2"
                 android:weightSum="1">
 
                 <TextView
@@ -1111,26 +1111,26 @@
                     android:layout_width="0dp"
                     android:layout_height="25dp"
                     android:layout_weight="1"
-                    android:background="#F2F2F2"
+                    android:background="@drawable/border2"
                     android:onClick="makeReservation"/>
             </TableRow>
 
 
             <TableRow
-                android:background="#F2F2F2"
+                android:background="@drawable/border2"
                 android:weightSum="1">
                 <TextView
                     android:id="@+id/row21"
                     android:layout_width="0dp"
                     android:layout_height="25dp"
                     android:layout_weight="1"
-                    android:background="#F2F2F2"
+                    android:background="@drawable/border"
                     android:gravity="center"
                     android:onClick="makeReservation" android:textAlignment="center"/>
             </TableRow>
 
             <TableRow
-                android:background="#F2F2F2"
+                android:background="@drawable/border2"
                 android:weightSum="1">
 
                 <TextView
@@ -1138,12 +1138,12 @@
                     android:layout_width="0dp"
                     android:layout_height="25dp"
                     android:layout_weight="1"
-                    android:background="#F2F2F2"
+                    android:background="@drawable/border2"
                     android:onClick="makeReservation"/>
             </TableRow>
 
             <TableRow
-                android:background="#F2F2F2"
+                android:background="@drawable/border2"
                 android:weightSum="1">
 
                 <TextView
@@ -1151,12 +1151,12 @@
                     android:layout_width="0dp"
                     android:layout_height="25dp"
                     android:layout_weight="1"
-                    android:background="#F2F2F2"
+                    android:background="@drawable/border2"
                     android:onClick="makeReservation"/>
             </TableRow>
 
             <TableRow
-                android:background="#F2F2F2"
+                android:background="@drawable/border2"
                 android:weightSum="1">
 
                 <TextView
@@ -1164,25 +1164,25 @@
                     android:layout_width="0dp"
                     android:layout_height="25dp"
                     android:layout_weight="1"
-                    android:background="#F2F2F2"
+                    android:background="@drawable/border2"
                     android:onClick="makeReservation"/>
             </TableRow>
 
             <TableRow
-                android:background="#F2F2F2"
+                android:background="@drawable/border2"
                 android:weightSum="1">
                 <TextView
                     android:id="@+id/row22"
                     android:layout_width="0dp"
                     android:layout_height="25dp"
                     android:layout_weight="1"
-                    android:background="#F2F2F2"
+                    android:background="@drawable/border"
                     android:gravity="center"
                     android:onClick="makeReservation" android:textAlignment="center"/>
             </TableRow>
 
             <TableRow
-                android:background="#F2F2F2"
+                android:background="@drawable/border2"
                 android:weightSum="1">
 
                 <TextView
@@ -1190,12 +1190,12 @@
                     android:layout_width="0dp"
                     android:layout_height="25dp"
                     android:layout_weight="1"
-                    android:background="#F2F2F2"
+                    android:background="@drawable/border2"
                     android:onClick="makeReservation"/>
             </TableRow>
 
             <TableRow
-                android:background="#F2F2F2"
+                android:background="@drawable/border2"
                 android:weightSum="1">
 
                 <TextView
@@ -1203,12 +1203,12 @@
                     android:layout_width="0dp"
                     android:layout_height="25dp"
                     android:layout_weight="1"
-                    android:background="#F2F2F2"
+                    android:background="@drawable/border2"
                     android:onClick="makeReservation"/>
             </TableRow>
 
             <TableRow
-                android:background="#F2F2F2"
+                android:background="@drawable/border2"
                 android:weightSum="1">
 
                 <TextView
@@ -1216,25 +1216,25 @@
                     android:layout_width="0dp"
                     android:layout_height="25dp"
                     android:layout_weight="1"
-                    android:background="#F2F2F2"
+                    android:background="@drawable/border2"
                     android:onClick="makeReservation"/>
             </TableRow>
 
             <TableRow
-                android:background="#F2F2F2"
+                android:background="@drawable/border2"
                 android:weightSum="1">
                 <TextView
                     android:id="@+id/row23"
                     android:layout_width="0dp"
                     android:layout_height="25dp"
                     android:layout_weight="1"
-                    android:background="#F2F2F2"
+                    android:background="@drawable/border"
                     android:gravity="center"
                     android:onClick="makeReservation" android:textAlignment="center"/>
             </TableRow>
 
             <TableRow
-                android:background="#F2F2F2"
+                android:background="@drawable/border2"
                 android:weightSum="1">
 
                 <TextView
@@ -1242,12 +1242,12 @@
                     android:layout_width="0dp"
                     android:layout_height="25dp"
                     android:layout_weight="1"
-                    android:background="#F2F2F2"
+                    android:background="@drawable/border2"
                     android:onClick="makeReservation"/>
             </TableRow>
 
             <TableRow
-                android:background="#F2F2F2"
+                android:background="@drawable/border2"
                 android:weightSum="1">
 
                 <TextView
@@ -1255,12 +1255,12 @@
                     android:layout_width="0dp"
                     android:layout_height="25dp"
                     android:layout_weight="1"
-                    android:background="#F2F2F2"
+                    android:background="@drawable/border2"
                     android:onClick="makeReservation"/>
             </TableRow>
 
             <TableRow
-                android:background="#F2F2F2"
+                android:background="@drawable/border2"
                 android:weightSum="1">
 
                 <TextView
@@ -1268,7 +1268,7 @@
                     android:layout_width="0dp"
                     android:layout_height="25dp"
                     android:layout_weight="1"
-                    android:background="#F2F2F2"
+                    android:background="@drawable/border2"
                     android:onClick="makeReservation"/>
             </TableRow>
         </TableLayout>
