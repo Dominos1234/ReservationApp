@@ -75,17 +75,14 @@ class LoginActivity : AppCompatActivity() {
 
             Log.d("Success", json)
 
-            val toast : Toast
 
             var gson = Gson()
             var User = gson.fromJson(data, User.UserInfo::class.java)
 
-            if (User.code == "incorrectLogin"){
-                toast = Toast.makeText(applicationContext, resources.getString(R.string.incorrect_login), Toast.LENGTH_LONG)
-                toast.setGravity(Gravity.TOP, 0, 140)
-                toast.show()
-            }
-            else if(User.code == "correct"){
+            when(User.code){
+                "incorrectLogin" -> Toast.makeText(this,  resources.getString(R.string.incorrect_login), Toast.LENGTH_LONG).show()
+
+                "correct" -> {
                 val sharedPreferences = getSharedPreferences("User", Context.MODE_PRIVATE)
                 val editor = sharedPreferences.edit()
 
@@ -97,13 +94,10 @@ class LoginActivity : AppCompatActivity() {
 
                 editor.apply()
 
-                var login = User.data.login
-
-                toast = Toast.makeText(applicationContext, resources.getString(R.string.welcome) + " " + "$login", Toast.LENGTH_LONG)
-                toast.setGravity(Gravity.TOP, 0, 140)
-                toast.show()
-
+                Toast.makeText(applicationContext,resources.getString(R.string.welcome) + "${User.data.login}",Toast.LENGTH_LONG).show()
                 showResourcesActivity()
+                }
+                "unknownError" -> Toast.makeText(this,  resources.getString(R.string.unknown_error), Toast.LENGTH_LONG).show()
             }
 
 
@@ -112,25 +106,7 @@ class LoginActivity : AppCompatActivity() {
         })
 
     }
-        /*
-        override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-            val inflater = menuInflater
-            inflater.inflate(com.example.inzynierka.R.menu.settings_menu_nologout, menu)
-            return true
-        }
 
-        override fun onOptionsItemSelected(item: MenuItem): Boolean {
-            if (item.itemId == com.example.inzynierka.R.id.settings){
-                return true
-            }
-            else if (item.itemId == com.example.inzynierka.R.id.qr_code){
-                QRScanner()
-                return true
-            }
-            return super.onOptionsItemSelected(item)
-        }
-
-*/
 
         fun ScanQRCode(view: View){
             var i = Intent(this, QRScannerActivity::class.java)

@@ -120,9 +120,17 @@ class MakeReservationActivity : AppCompatActivity(), DatePickerDialog.OnDateSetL
         }
 
         for (i in 0..Times.size-1){
-            Times[i].setOnClickListener{
-                chosenTime = i
-                TimePickerDialog(this,this,hour,minute, true).show()
+            if (i == 0) {
+                Times[i].setOnClickListener {
+                    chosenTime = i
+                    TimePickerDialog(this, this, hour, minute, true).show()
+                }
+            }
+            else{
+                Times[i].setOnClickListener {
+                    chosenTime = i
+                    TimePickerDialog(this, this, hour+1, minute, true).show()
+                }
             }
         }
 
@@ -376,13 +384,8 @@ class MakeReservationActivity : AppCompatActivity(), DatePickerDialog.OnDateSetL
 
         result.fold(success = { json ->
 
-
-            var toast: Toast
-
             var gson = Gson()
             var Response = gson.fromJson(data, ResponseJson.ResponseInfo::class.java)
-
-            Log.d("Success", json)
 
             when (Response.code){
                 "notLogged" -> {
