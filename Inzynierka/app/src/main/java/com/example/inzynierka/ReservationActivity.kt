@@ -276,11 +276,13 @@ class ReservationActivity : AppCompatActivity() {
             sMinute /= 15
             eMinute /= 15
 
+            val only_user = book.user.split("(")[0]
             if(book.repeatInterval == "") {
 
                 val sharedPreferences = getSharedPreferences("User", Context.MODE_PRIVATE)
                 val username = sharedPreferences.getString("login","")
                 val extId = sharedPreferences.getString("externalId","")
+
 
                 if ((startDate.dayOfMonth == day && startDate.monthValue == month && startDate.year == year) || (endDate.dayOfMonth == day && endDate.monthValue == month && endDate.year == year)){
                     for (i in 0 until eHour*4+eMinute-sHour*4-sMinute) {
@@ -306,11 +308,11 @@ class ReservationActivity : AppCompatActivity() {
                                 else hours = "$startHour:$startMinutes-$endHour:$endMinutes"
 
                                 if(rowList[n+i].text.isEmpty()) {  //Name the reservation
-                                    rowList[n + i].text = "${book.name}, ${book.user}, $hours"
+                                    rowList[n + i].text = "${book.name}, $only_user, $hours"
                                     rowList[n + i].gravity = Gravity.CENTER
                                 }
                                 else {
-                                    rowList[n + i + 1].text = "${book.name}, ${book.user}, $hours"
+                                    rowList[n + i + 1].text = "${book.name}, $only_user, $hours"
                                     rowList[n + i + 1].gravity = Gravity.CENTER
                                 }
                                 changeColorRedBorderTop(rowList[n + i])
@@ -346,11 +348,11 @@ class ReservationActivity : AppCompatActivity() {
                                 else hours = "$startHour:$startMinutes-$endHour:$endMinutes"
 
                                 if(rowList[n+i].text.isEmpty()) {  //Name the reservation
-                                    rowList[n + i].text = "${book.name}, ${book.user}, $hours"
+                                    rowList[n + i].text = "${book.name}, $only_user, $hours"
                                     rowList[n + i].gravity = Gravity.CENTER
                                 }
                                 else {
-                                    rowList[n + i + 1].text = "${book.name}, ${book.user}, $hours"
+                                    rowList[n + i + 1].text = "${book.name}, $only_user, $hours"
                                     rowList[n + i + 1].gravity = Gravity.CENTER
                                 }
                                 changeColorGreenBorderTop(rowList[n + i])
@@ -417,11 +419,11 @@ class ReservationActivity : AppCompatActivity() {
                                     else hours = "$startHour:$startMinutes-$endHour:$endMinutes"
 
                                     if(rowList[n+i].text.isEmpty()) {  //Name the reservation
-                                        rowList[n + i].text = "${book.name}, ${book.user}, $hours"
+                                        rowList[n + i].text = "${book.name}, $only_user, $hours"
                                         rowList[n + i].gravity = Gravity.CENTER
                                     }
                                     else {
-                                        rowList[n + i + 1].text = "${book.name}, ${book.user}, $hours"
+                                        rowList[n + i + 1].text = "${book.name}, $only_user, $hours"
                                         rowList[n + i + 1].gravity = Gravity.CENTER
                                     }
                                     changeColorRedBorderTop(rowList[n + i])
@@ -457,11 +459,11 @@ class ReservationActivity : AppCompatActivity() {
                                     else hours = "$startHour:$startMinutes-$endHour:$endMinutes"
 
                                     if(rowList[n+i].text.isEmpty()) {  //Name the reservation
-                                        rowList[n + i].text = "${book.name}, ${book.user}, $hours"
+                                        rowList[n + i].text = "${book.name}, $only_user, $hours"
                                         rowList[n + i].gravity = Gravity.CENTER
                                     }
                                     else {
-                                        rowList[n + i + 1].text = "${book.name}, ${book.user}, $hours"
+                                        rowList[n + i + 1].text = "${book.name}, $only_user, $hours"
                                         rowList[n + i + 1].gravity = Gravity.CENTER
                                     }
 

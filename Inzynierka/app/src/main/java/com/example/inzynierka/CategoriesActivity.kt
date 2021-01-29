@@ -1,12 +1,16 @@
 package com.example.inzynierka
 
+import android.app.Activity
 import android.content.Context
 import android.content.Intent
+import android.content.res.Configuration
+import android.content.res.Resources
 import android.graphics.BitmapFactory
 import android.os.Build
 import android.os.Bundle
 import android.os.StrictMode
 import android.util.Base64
+import android.util.DisplayMetrics
 import android.util.Log
 import android.view.*
 import android.view.animation.AlphaAnimation
@@ -15,10 +19,16 @@ import androidx.appcompat.app.AppCompatActivity
 import com.github.kittinunf.fuel.Fuel
 import com.google.gson.Gson
 import java.io.Serializable
+import java.util.*
+import kotlin.collections.ArrayList
 
 
 class CategoriesActivity : AppCompatActivity() {
 
+    override fun onResume() {
+        super.onResume()
+
+    }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         try {
@@ -26,6 +36,8 @@ class CategoriesActivity : AppCompatActivity() {
         } catch (e: NullPointerException) {
         }
 
+        val sharedPreferences2 = getSharedPreferences("Settings", Context.MODE_PRIVATE)
+        val language = sharedPreferences2.getString("language","en")
         setContentView(R.layout.activity_categories)
         if (Build.VERSION.SDK_INT > 9) {
             val policy =
@@ -205,4 +217,5 @@ class CategoriesActivity : AppCompatActivity() {
         }
 
     }
+
 }

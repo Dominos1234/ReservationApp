@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ISRZ</string>
+
+    <!--Menu-->
+    <string name="menu_settings">Ustawienia</string>
+    <string name="menu_logout">Wyloguj się</string>
+    <string name="menu_qr">Skaner QR kodów</string>
+    <string name="menu_day">Dzień</string>
+    <string name="menu_week">Tydzień</string>
+    <string name="menu_month">Miesiąc</string>
+
+    <!--Calendar-->
+    <string name="calendar">Kalendarz</string>
+    <string name="calendar_description">Wybierz dany dzień, aby zobaczyć zajętość zasobu lub utworzyć rezerwacje.</string>
+
+    <!--Categories-->
+    <string name="categories">Kategorie</string>
+
+    <!--Items-->
+    <string name="items">Zasoby</string>
+
+    <!--Login-->
+    <string name="username">Nazwa użytkownika</string>
+    <string name="password">Hasło</string>
+    <string name="login">Zaloguj się</string>
+    <string name="login_title">Logowanie</string>
+
+    <!--Make reservation-->
+    <string name="make_reservation">Utwórz rezerwacje</string>
+    <string name="name">Nazwa</string>
+    <string name="start_date">Data rozpoczęcia</string>
+    <string name="start_time">Czas rozpoczęcia</string>
+    <string name="end_date">Data zakończenia</string>
+    <string name="end_time">Czas zakończenia</string>
+    <string name="optional">Opcjonalne</string>
+    <string name="repeat_interval">Rezerwacja cykliczna</string>
+    <string name="repeat_interval_unit">Interwał cykliczność</string>
+    <string name="repeat_end_date">Data zakończenia rezerwacji cyklicznej</string>
+    <string name="repeat_end_time">Czas zakończenia rezerwacji cyklicznej</string>
+    <string name="create_reservation">Utwórz rezerwacje</string>
+
+    <!--QR Scanner-->
+    <string name="qr_scan">Kod QR</string>
+    <string name="qr_description">Zeskanuj kod QR znajdujący się przy wybranej sali</string>
+
+    <!--Settings-->
+    <string name="settings_description">Wybierz język aplikacji</string>
+    <string name="polish">polski</string>
+    <string name="english">angielski</string>
+
+    <!--Toast-->
+    <string name="not_logged">Przepraszamy, coś poszło nie tak i zostałeś wylogowany</string>
+    <string name="missing_permissions">Uprawnienia konta nie są wystarczające do wykonania tej czynności.</string>
+    <string name="unknown_error">Wystąpił nieznany błąd.</string>
+    <string name="correct">Pomyślnie utworzono rezerwację.</string>
+    <string name="missing_fields">Wystąpił błąd techniczny: brakuje niektórych pól.</string>
+    <string name="invalid_data">Wystąpił błąd techniczny: nieprawidłowe dane żądania.</string>
+    <string name="entity_already_exists">Jednostka o podanym kluczu już istnieje.</string>
+    <string name="entity_not_exists">Wystąpił błąd: jednostka nie istnieje.</string>
+    <string name="master_admin_not_allowed">Główny administrator nie może wykonać tej czynności. Zaloguj się na konto administratora.</string>
+    <string name="booking_existing_in_same_interval">W podanym przedziale czasowym istnieje już inna rezerwacja.</string>
+
+    <string name="name_required">Nazwa jest wymagana.</string>
+    <string name="all_fields_repeating">W celu utworzenia powtarzającej się rezerwacji, wypełnij wszystkie pola.</string>
+    <string name="camera_permission">Aby móc korzystać ze skanera QR, apliakcja musi posiadać dostęp do aparatu.</string>
+    <string name="already_taken">"Wybrany termin został już zarezerwowany."</string>
+    <string name="delete_reservation">Czy na pewno chcesz usunąć tę rezerwację?</string>
+    <string name="yes">Tak</string>
+    <string name="cancel">Anuluj</string>
+
+    <string name="incorrect_login">Nieprawidłowa nazwa użytkownika lub hasło, spróbuj ponownie.</string>
+    <string name="welcome">Witaj </string>
+    <string name="wrong_qr_code">Nieprawidłowy kod QR </string>
+</resources>

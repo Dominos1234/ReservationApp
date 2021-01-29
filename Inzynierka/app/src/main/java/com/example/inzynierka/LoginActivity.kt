@@ -2,9 +2,12 @@ package com.example.inzynierka
 
 import android.content.Context
 import android.content.Intent
+import android.content.res.Configuration
+import android.content.res.Resources
 import android.os.Build
 import android.os.Bundle
 import android.os.StrictMode
+import android.util.DisplayMetrics
 import android.util.Log
 import android.view.*
 import android.widget.Button
@@ -14,6 +17,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.github.kittinunf.fuel.Fuel
 import com.google.gson.Gson
+import java.util.*
 
 
 class LoginActivity : AppCompatActivity() {
@@ -25,6 +29,9 @@ class LoginActivity : AppCompatActivity() {
             this.supportActionBar!!.hide()
         } catch (e: NullPointerException) {
         }
+        val sharedPreferences2 = getSharedPreferences("Settings", Context.MODE_PRIVATE)
+        val language = sharedPreferences2.getString("language","en")
+        setAppLocale(language, this)
         setContentView(R.layout.activity_main)
         if (Build.VERSION.SDK_INT > 9) {
             val policy =
@@ -112,5 +119,22 @@ class LoginActivity : AppCompatActivity() {
             var i = Intent(this, SettingsActivity::class.java)
             startActivity(i)
         }
+
+    fun setAppLocale(languageFromPreference: String?, context: Context)
+    {
+
+        if (languageFromPreference != null) {
+            val resources: Resources = context.resources
+            val dm: DisplayMetrics = resources.displayMetrics
+            val config: Configuration = resources.configuration
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1) {
+                config.setLocale(Locale(languageFromPreference.toLowerCase(Locale.ROOT)))
+            } else {
+                config.setLocale(Locale(languageFromPreference.toLowerCase(Locale.ROOT)))
+            }
+            resources.updateConfiguration(config, dm)
+        }
+    }
 }
+
 

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ISRZ</string>
+
+    <!--Menu-->
+    <string name="menu_settings">Settings</string>
+    <string name="menu_logout">Log out</string>
+    <string name="menu_qr">QR Code Scanner</string>
+    <string name="menu_day">Day</string>
+    <string name="menu_week">Week</string>
+    <string name="menu_month">Month</string>
+
+    <!--Calendar-->
+    <string name="calendar">Calendar</string>
+    <string name="calendar_description">Select a specific day to view resource usage or create reservation.</string>
+
+    <!--Categories-->
+    <string name="categories">Categories</string>
+
+    <!--Items-->
+    <string name="items">Items</string>
+
+    <!--Login-->
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="login">Log in</string>
+    <string name="login_title">Log in</string>
+
+    <!--Make reservation-->
+    <string name="make_reservation">Make reservation</string>
+    <string name="name">Name</string>
+    <string name="start_date">Start date</string>
+    <string name="start_time">Start time</string>
+    <string name="end_date">End date</string>
+    <string name="end_time">End time</string>
+    <string name="optional">Optional</string>
+    <string name="repeat_interval">Repeat interval</string>
+    <string name="repeat_interval_unit">Repeat interval unit</string>
+    <string name="repeat_end_date">Repeat end date</string>
+    <string name="repeat_end_time">Repeat end time</string>
+    <string name="create_reservation">Create reservation</string>
+
+
+    <!--QR Scanner-->
+    <string name="qr_scan">QR Code</string>
+    <string name="qr_description">Scan the QR code next to the selected room</string>
+
+    <!--Settings-->
+    <string name="settings_description">Select the language of the application</string>
+    <string name="polish">polish</string>
+    <string name="english">english</string>
+
+    <!--Toast-->
+    <string name="not_logged">Sorry, something went wrong, you were disconnected.</string>
+    <string name="missing_permissions">Account permissions are not sufficient to perform this action.</string>
+    <string name="unknown_error">Unknown error occurred.</string>
+    <string name="correct">Successfully created a reservation</string>
+    <string name="missing_fields">Technical error occurred: some fields are missing.</string>
+    <string name="invalid_data">Technical error occurred: invalid request data.</string>
+    <string name="entity_already_exists">Entity with given key already exists.</string>
+    <string name="entity_not_exists">Error occurred: entity not exists.</string>
+    <string name="master_admin_not_allowed">Master admin is not allowed for this action. Please login to admin account.</string>
+    <string name="booking_existing_in_same_interval">Another booking already exists in given time interval.</string>
+
+    <string name="name_required">Name is required.</string>
+    <string name="all_fields_repeating">If you want to create a repeating booking, please fill all fields.</string>
+    <string name="camera_permission">You need the camera permission to be able to use QR Scanner.</string>
+    <string name="already_taken">"Wybrany termin został już zarezerwowany."</string>
+    <string name="delete_reservation">Are you sure you want to delete this reservation?</string>
+    <string name="yes">Yes</string>
+    <string name="cancel">Cancel</string>
+
+    <string name="incorrect_login">"Incorrect username or password, try again"</string>
+    <string name="welcome">Welcome </string>
+    <string name="wrong_qr_code">Wrong QR Code </string>
+</resources>
