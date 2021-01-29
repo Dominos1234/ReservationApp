@@ -152,6 +152,7 @@ class ItemsActivity : AppCompatActivity() {
 
     private fun settings(){
         var i = Intent(this, SettingsActivity::class.java)
+        i.putExtra("activity","item")
         startActivity(i)
     }
 

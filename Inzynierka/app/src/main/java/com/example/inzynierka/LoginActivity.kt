@@ -110,15 +110,16 @@ class LoginActivity : AppCompatActivity() {
     }
 
 
-        fun ScanQRCode(view: View){
-            var i = Intent(this, QRScannerActivity::class.java)
-            startActivity(i)
-        }
+    fun ScanQRCode(view: View){
+        var i = Intent(this, QRScannerActivity::class.java)
+        startActivity(i)
+    }
 
-        fun settings(){
-            var i = Intent(this, SettingsActivity::class.java)
-            startActivity(i)
-        }
+    fun settings(){
+        var i = Intent(this, SettingsActivity::class.java)
+        i.putExtra("activity","log")
+        startActivity(i)
+    }
 
     fun setAppLocale(languageFromPreference: String?, context: Context)
     {

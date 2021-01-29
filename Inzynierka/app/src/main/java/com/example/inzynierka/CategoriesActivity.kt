@@ -139,6 +139,7 @@ class CategoriesActivity : AppCompatActivity() {
 
     fun settings(){
         var i = Intent(this, SettingsActivity::class.java)
+        i.putExtra("activity","cat")
         startActivity(i)
     }
 

@@ -2,6 +2,7 @@ package com.example.inzynierka
 
 import android.app.Activity
 import android.content.Context
+import android.content.Intent
 import android.content.SharedPreferences
 import android.content.res.Configuration
 import android.content.res.Resources
@@ -89,6 +90,17 @@ class SettingsActivity : AppCompatActivity() {
         if (language != null) {
             setLocale(language)
         }
+    }
+
+    fun save(v:View){
+        val goTo = this@SettingsActivity.intent.getStringExtra("activity")
+        var i: Intent? = null
+        when (goTo) {
+            "log" -> i = Intent(this, LoginActivity::class.java)
+            "cat" -> i = Intent(this, CategoriesActivity::class.java)
+            "item" -> i = Intent(this, ItemsActivity::class.java)
+        }
+        startActivity(i)
     }
 
 }
