@@ -73,9 +73,6 @@ class LoginActivity : AppCompatActivity() {
 
         result.fold(success = { json ->
 
-            Log.d("Success", json)
-
-
             var gson = Gson()
             var User = gson.fromJson(data, User.UserInfo::class.java)
 
@@ -91,15 +88,13 @@ class LoginActivity : AppCompatActivity() {
                 editor.putString("sessionId", User.data.password)
                 editor.putString("externalId", User.data.externalId)
                 editor.putBoolean("adminUser", User.data.adminUser)
-
                 editor.apply()
 
-                Toast.makeText(applicationContext,resources.getString(R.string.welcome) + "${User.data.login}",Toast.LENGTH_LONG).show()
+                Toast.makeText(applicationContext,resources.getString(R.string.welcome) + " " + "${User.data.login}",Toast.LENGTH_LONG).show()
                 showResourcesActivity()
                 }
                 "unknownError" -> Toast.makeText(this,  resources.getString(R.string.unknown_error), Toast.LENGTH_LONG).show()
             }
-
 
         }, failure = { error ->
             Log.e("Failure", error.toString())

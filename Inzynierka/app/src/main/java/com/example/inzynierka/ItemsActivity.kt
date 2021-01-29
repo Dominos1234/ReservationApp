@@ -10,6 +10,7 @@ import android.os.StrictMode
 import android.util.Base64
 import android.util.Log
 import android.view.*
+import android.view.animation.AlphaAnimation
 import android.widget.*
 import com.github.kittinunf.fuel.Fuel
 import com.google.gson.Gson
@@ -169,8 +170,11 @@ class ItemsActivity : AppCompatActivity() {
         val listView = findViewById<ListView>(com.example.inzynierka.R.id.items_listview)
         val adapter = MyItemAdapter(this, items, category)
         listView.adapter = adapter
+        val animation1 = AlphaAnimation(0.6F, 1F);
+        animation1.setDuration(4000);
 
-        listView.setOnItemClickListener { _, _, position, _ ->
+        listView.setOnItemClickListener { _, v, position, _ ->
+            v.startAnimation(animation1);
             val intent = Intent(this, CalendarActivity::class.java)
             intent.putExtra("item", items.get(position) as Serializable)
             startActivity(intent)
@@ -203,7 +207,6 @@ class ItemsActivity : AppCompatActivity() {
             val nameVal4 = rowMain.findViewById<TextView>(com.example.inzynierka.R.id.nameVal4)
             val nameVal5 = rowMain.findViewById<TextView>(com.example.inzynierka.R.id.nameVal5)
             val nameVal6 = rowMain.findViewById<TextView>(com.example.inzynierka.R.id.nameVal6)
-            val nameVal7 = rowMain.findViewById<TextView>(com.example.inzynierka.R.id.nameVal7)
 
             var nameValList = java.util.ArrayList<TextView>()
             nameValList.add(nameVal1)
@@ -212,7 +215,6 @@ class ItemsActivity : AppCompatActivity() {
             nameValList.add(nameVal4)
             nameValList.add(nameVal5)
             nameValList.add(nameVal6)
-            nameValList.add(nameVal7)
 
             var i = 0
             for (attributeVal in mItemList.get(position).attributes ){
@@ -229,8 +231,8 @@ class ItemsActivity : AppCompatActivity() {
             }
 
 
-            Name.text = "Nazwa: " + mItemList.get(position).name
-            Description.text = "Opis: " + mItemList.get(position).description
+            Name.text = mItemList.get(position).name
+            Description.text = mItemList.get(position).description
 
 
             if (mItemList.get(position).imagesBase64.isNotEmpty()) {

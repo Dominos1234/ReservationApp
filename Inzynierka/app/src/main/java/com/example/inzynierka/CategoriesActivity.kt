@@ -9,6 +9,7 @@ import android.os.StrictMode
 import android.util.Base64
 import android.util.Log
 import android.view.*
+import android.view.animation.AlphaAnimation
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import com.github.kittinunf.fuel.Fuel
@@ -145,7 +146,12 @@ class CategoriesActivity : AppCompatActivity() {
         val adapter = MyCustomAdapter(this, categories)
         listView.adapter = adapter
 
-        listView.setOnItemClickListener { _, _, position, _ ->
+        val animation1 = AlphaAnimation(0.6F, 1F);
+        animation1.duration = 1000;
+
+
+        listView.setOnItemClickListener { _, v, position, _ ->
+            v.startAnimation(animation1);
             val element = adapter.getItemId(position) // The item that was clicked
 
             val sharedPreferences = getSharedPreferences("Category", Context.MODE_PRIVATE) //Saving chosen element
@@ -153,8 +159,6 @@ class CategoriesActivity : AppCompatActivity() {
 
             editor.putString("Id", categories.get(element.toInt()).id)
             editor.apply()
-
-            //val intent = Intent(this, SplashScreen2Activity::class.java)
             val intent = Intent(this, ItemsActivity::class.java)
             intent.putExtra("category", categories.get(element.toInt()) as Serializable)
             startActivity(intent)

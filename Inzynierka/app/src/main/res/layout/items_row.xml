@@ -7,80 +7,92 @@
     android:layout_height="match_parent"
     tools:ignore="MissingDefaultResource">
 
-    <ImageView
-        android:id="@+id/image"
-        android:layout_width="150dp"
-        android:layout_height="142dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="56dp"
-        android:adjustViewBounds="true"
-        android:background="@drawable/layout_border"
-        android:scaleType="fitXY"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/name"
-        android:layout_width="200dp"
-        android:layout_height="20dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="28dp"
-        app:layout_constraintStart_toEndOf="@+id/image"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/description"
-        android:layout_width="200dp"
-        android:layout_height="51dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="10dp"
-        app:layout_constraintStart_toEndOf="@+id/image"
-        app:layout_constraintTop_toBottomOf="@+id/name" />
-
     <LinearLayout
-        android:layout_width="200dp"
-        android:layout_height="130dp"
-        android:orientation="vertical"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="10dp"
-        app:layout_constraintStart_toEndOf="@+id/image"
-        app:layout_constraintTop_toBottomOf="@+id/description">
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        tools:ignore="MissingConstraints"
+        android:background="@drawable/border">
 
-        <TextView
-            android:id="@+id/nameVal1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="0dp"
+            android:layout_height="112dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="38dp"
+            android:layout_marginBottom="20dp"
+            android:layout_weight="0.3"
+            android:adjustViewBounds="true"
+            android:background="@drawable/layout_border"
+            android:scaleType="fitXY"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:id="@+id/nameVal2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+        <LinearLayout
+            android:layout_weight="0.7"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:textSize="16dp"
+                android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/nameVal3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp" />
 
-        <TextView
-            android:id="@+id/nameVal4"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintStart_toEndOf="@+id/image"
+                app:layout_constraintTop_toBottomOf="@+id/description">
 
-        <TextView
-            android:id="@+id/nameVal5"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/nameVal1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
 
-        <TextView
-            android:id="@+id/nameVal6"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/nameVal2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
 
-        <TextView
-            android:id="@+id/nameVal7"
-            android:layout_width="match_parent"
-            android:layout_height="29dp" />
+                <TextView
+                    android:id="@+id/nameVal3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/nameVal4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/nameVal5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/nameVal6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+        </LinearLayout>
     </LinearLayout>
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

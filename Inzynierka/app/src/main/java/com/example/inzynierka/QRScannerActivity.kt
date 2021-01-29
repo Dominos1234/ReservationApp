@@ -37,17 +37,19 @@ class QRScannerActivity : AppCompatActivity() {
         codeScanner.apply{
             camera = CodeScanner.CAMERA_BACK
             formats = CodeScanner.ALL_FORMATS
-
             autoFocusMode = AutoFocusMode.SAFE
             scanMode = ScanMode.CONTINUOUS
             isAutoFocusEnabled = true
             isFlashEnabled = false
-
             decodeCallback = DecodeCallback {
                 runOnUiThread {
-                    val browserIntent =
-                        Intent(Intent.ACTION_VIEW, Uri.parse(it.text))
-                    startActivity(browserIntent)
+                    try {
+                        val browserIntent =
+                            Intent(Intent.ACTION_VIEW, Uri.parse(it.text))
+                        startActivity(browserIntent)
+                    }catch(e: Exception){
+                        Toast.makeText(this@QRScannerActivity,  resources.getString(R.string.wrong_qr_code), Toast.LENGTH_SHORT).show()
+                    }
                 }
             }
 

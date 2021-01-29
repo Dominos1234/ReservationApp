@@ -60,4 +60,5 @@
 
     <string name="incorrect_login">"Incorrect username or password, try again"</string>
     <string name="welcome">Welcome </string>
+    <string name="wrong_qr_code">Wrong QR Code </string>
 </resources>

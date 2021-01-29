@@ -39,7 +39,7 @@
     <string name="english">angielski</string>
 
     <!--Toast-->
-    <string name="not_logged">Przepraszamy, coś poszło nie tak.</string>
+    <string name="not_logged">Przepraszamy, coś poszło nie tak i zostałeś wylogowany</string>
     <string name="missing_permissions">Uprawnienia konta nie są wystarczające do wykonania tej czynności.</string>
     <string name="unknown_error">Wystąpił nieznany błąd.</string>
     <string name="correct">Pomyślnie utworzono rezerwację.</string>
@@ -60,4 +60,5 @@
 
     <string name="incorrect_login">Nieprawidłowa nazwa użytkownika lub hasło, spróbuj ponownie.</string>
     <string name="welcome">Witaj </string>
+    <string name="wrong_qr_code">Nieprawidłowy kod QR </string>
 </resources>
