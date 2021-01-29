@@ -242,9 +242,10 @@
         android:background="@drawable/blue_button"
         android:onClick="tryBooking"
         android:text="@string/create_reservation"
+        android:textAllCaps="false"
         android:textColor="#FFFFFF"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@+id/repeatTimes"/>
+        app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/repeatTimes"/>
 
     <TextView
         android:id="@+id/textView2"

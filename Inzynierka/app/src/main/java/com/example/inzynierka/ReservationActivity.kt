@@ -588,14 +588,14 @@ class ReservationActivity : AppCompatActivity() {
         else hours = "$startHour:$startMinutes-$endHour:$endMinutes"
 
         val builder: AlertDialog.Builder = AlertDialog.Builder(this)
-        builder.setMessage("Are you sure you want to delete that reservation? ($hours)")
+        builder.setMessage(getString(R.string.delete_reservation) + "($hours)")
 
-        builder.setPositiveButton("Yes") { dialog, _ ->
+        builder.setNegativeButton(resources.getString(R.string.cancel)) { dialog, _ ->
+            dialog.dismiss()
+        }
+        builder.setPositiveButton(resources.getString(R.string.yes)) { dialog, _ ->
             dialog.dismiss()
             deleteReservation(view)
-        }
-        builder.setNegativeButton("Cancel") { dialog, _ ->
-            dialog.dismiss()
         }
 
         val alertDialog:AlertDialog = builder.create()

@@ -87,12 +87,16 @@
         app:layout_constraintTop_toTopOf="parent"/>
 
     <Button
+        style="?android:attr/borderlessButtonStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@drawable/button_grey"
+        android:capitalize="none"
+        android:onClick="save"
         android:text="@string/save"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView9"
-        android:onClick="save"/>
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF" app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView9"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
